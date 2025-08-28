@@ -1,0 +1,48 @@
+# Node modules and log files (all levels)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Output of npm pack
+*.tgz
+
+# Dependency directories (multiple project structure)
+apps/*/node_modules/
+packages/*/node_modules/
+
+# Next.js build output
+.next/
+apps/*/.next/
+out/
+apps/*/out/
+
+# Local env and secrets files (never commit these!)
+.env
+.env.*
+!.env.example
+
+# Mac/Linux/Windows system files
+.DS_Store
+Thumbs.db
+
+# VS Code file settings (optional)
+.vscode/
+
+# Coverage output
+coverage/
+apps/*/coverage/
+packages/*/coverage/
+
+# Build outputs
+dist/
+apps/*/dist/
+packages/*/dist/
+build/
+apps/*/build/
+packages/*/build/
+
+# Redis data if generated
+redis_data/
+apps/*/redis_data/
