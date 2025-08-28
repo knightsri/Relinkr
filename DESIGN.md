@@ -1,102 +1,92 @@
-### Project Design Document
-
-Here is a structured design document based on the current plan.
-
----
-
 ## **Project Relinkr: A Blazingly Fast, Self-Hosted URL Redirector**
 
 ### 1. Abstract
 
-Project Relinkr is a modern, lightweight, and performant URL redirection service designed to be self-hosted with ease. It provides individuals and organizations with a powerful tool to create, manage, and track branded short links under their own domain. Built with a focus on speed, the entire application runs in a single Docker container, leveraging Redis for instantaneous lookups.
+**Relinkr** is a modern, lightweight, and performant URL redirection service designed to be self-hosted with ease. It provides individuals and organizations with a powerful tool to create, manage, and track branded short links under their own domain. Built with a focus on speed and simplicity, the entire application runs in a single Docker container, leveraging Redis for instantaneous lookups.
+
+***
 
 ### 2. Core Features
 
-* **Custom Slugs:** Users can define their own human-readable short URLs (e.g., `url.myco.com/spring-sale`).
-* **Random Slug Generation:** Automatically generate a unique, short, non-guessable slug for any URL.
-* **Click Tracking:** An integrated counter tracks the number of times each link is accessed, with stats displayed on the user dashboard.
-* **QR Code Generation:** Instantly generate and display a QR code for every created link, simplifying mobile sharing.
-* **Simple User Dashboard:** An authenticated user can view, manage, and delete all of their created links from a single, clean interface.
-* **Dockerized Deployment:** The entire application is containerized for simple, one-command deployment on any system.
+* **Custom & Case-Insensitive Slugs**: Users can define their own human-readable short URLs (e.g., `My-Event`), which are normalized and stored in a case-insensitive manner to prevent collisions.
+* **Secure Random Slug Generation**: Automatically generate a unique, non-guessable slug for any URL using the `nanoid` library.
+* **Click Tracking**: An integrated counter tracks the number of times each link is accessed.
+* **Enhanced Logging (Optional)**: If enabled, the system can log the timestamp, referrer, IP address, and user-agent for each click, providing deeper analytics.
+* **Dynamic QR Code Generation**: Instantly generate and display a high-quality **SVG** QR code for every created link, simplifying mobile sharing.
+* **Simple User Dashboard**: An authenticated user can view, manage, and delete all of their created links from a single, clean interface.
+* **Dockerized Deployment**: The entire application is containerized for simple, one-command deployment on any system.
+
+***
 
 ### 3. Technical Architecture
 
-* **Frontend:** **Next.js (React)**
-    * *Why:* Provides a fast, modern user experience with server-side rendering (SSR) for quick initial page loads. Its file-based routing is simple and intuitive.
-* **Backend:** **Next.js API Routes (Node.js)**
-    * *Why:* Keeps the entire project within a single, unified framework. It's perfect for creating the lightweight REST API needed to manage links without the overhead of a separate backend server.
-* **Database:** **Redis**
-    * *Why:* As an in-memory key-value store, Redis is purpose-built for the primary task: incredibly fast URL lookups. Its atomic `INCR` command is also the most efficient way to handle click counting.
-* **Authentication:** **OAuth** (e.g., NextAuth.js)
-    * *Why:* Provides a secure and simple way for users to sign in using existing accounts (Google, GitHub, etc.), removing the need to manage passwords.
+* **Frontend**: **Next.js (React)**
+    * *Why*: Provides a fast, modern user experience with server-side rendering (SSR) for quick initial page loads.
+* **Backend**: **Next.js API Routes (Node.js)**
+    * *Why*: Keeps the entire project within a single, unified framework, ideal for creating the lightweight REST API needed to manage links.
+* **Database**: **Redis**
+    * *Why*: As an in-memory key-value store, Redis is purpose-built for incredibly fast URL lookups. Its atomic `INCR` command is the most efficient way to handle simple click counting. It can be configured for data persistence to prevent data loss on restart.
+* **URL Validation**: **Zod**
+    * *Why*: To sanitize and validate all incoming long URLs, ensuring they are well-formed and secure before being stored. The system will enforce the use of `https`.
 
-### 4. Data Models (Redis Schema)
+***
 
-To maintain speed and simplicity, we will use a key-prefix convention in Redis.
+### 4. Authentication & Authorization
 
-* **URL Mapping:** Stores the core redirection data.
-    * **Key:** `url:{slug}` (e.g., `url:spring-sale`)
-    * **Value:** `https://destination-url.com/with/all/the/parameters`
-* **Click Counter:** Tracks analytics for each link.
-    * **Key:** `clicks:{slug}` (e.g., `clicks:spring-sale`)
-    * **Value:** An integer (e.g., `142`)
-* **Link Ownership:** Maps a user to the links they've created.
-    * **Key:** `user:{userId}:links` (e.g., `user:github-12345:links`)
-    * **Value:** A Redis Set containing all slugs owned by the user (`"spring-sale"`, `"qR5tX"`, etc.). This makes retrieving all links for a user's dashboard very efficient.
+To keep the application secure and simple, **Relinkr uses an OAuth-based authentication system** via the **`NextAuth.js`** library.
 
-### 5. API Endpoints
+* **Providers**: Initial support for **GitHub** and **Google** to handle user sign-in.
+* **Secure API Operations**: User security is paramount. All operations that modify data (create, update, delete) must be protected.
+    * Instead of using public-facing slugs for API calls, the system will use a non-guessable **internal ID** for each link record.
+    * When a user attempts to modify a link via its internal ID, the backend will first retrieve the record and **verify that the `userId` from the session matches the `userId` stored with the link**.
+    * Requests to modify resources not owned by the user will be rejected with a `403 Forbidden` status. This prevents any user from ever accessing or modifying another user's data.
 
-The backend will be managed via a simple REST API.
+***
 
-* **`POST /api/links`**: Creates a new short link.
-    * *Body:* `{ "longUrl": "...", "customSlug": "..." (optional) }`
-    * *Returns:* The newly created link object, including the final slug and QR code data.
-* **`GET /api/links`**: Retrieves all links for the authenticated user.
-    * *Returns:* An array of link objects.
-* **`DELETE /api/links`**: Deletes a link.
-    * *Body:* `{ "slug": "..." }`
-    * *Returns:* A success or failure message.
+### 5. Data Models (Redis Schema)
 
-### 6. Core User Flow: Redirection
+* **URL Mapping**: Stores the core redirection data. Slugs are stored in lowercase to ensure case-insensitivity.
+    * **Key**: `url:{slug}` (e.g., `url:my-event`)
+    * **Value**: `{ "longUrl": "https://destination-url.com", "ownerId": "github-12345", "internalId": "aBcDeFg123" }` (stored as a JSON string)
+* **Click Counter**: Tracks the simple click count for each link.
+    * **Key**: `clicks:{slug}` (e.g., `clicks:my-event`)
+    * **Value**: An integer (e.g., `142`)
+* **Link Ownership**: Maps a user to the slugs they've created for efficient lookup.
+    * **Key**: `user:{userId}:links` (e.g., `user:github-12345:links`)
+    * **Value**: A Redis Set containing all slugs owned by the user (`"my-event"`, `"qr5tx"`, etc.).
+* **Detailed Log (Optional)**: If enabled, a Redis List stores detailed click data.
+    * **Key**: `log:{slug}` (e.g., `log:my-event`)
+    * **Value**: A list of JSON objects, with each object representing a single click event.
 
-1.  A user navigates to `your-domain.com/{slug}`.
-2.  The Next.js middleware or page router captures the `{slug}`.
-3.  The application makes two asynchronous calls to Redis:
-    1.  `GET url:{slug}` to retrieve the destination URL.
-    2.  `INCR clicks:{slug}` to increment the click counter.
-4.  If the `GET` call returns a valid URL, the application performs a permanent redirect (`308`).
-5.  If the `GET` call returns `nil` (no link found), the user is shown a 404 page or redirected to the homepage.
+***
 
+### 6. Privacy & Compliance
 
-### 7. Authentication & Authorization
+Given the optional collection of user data like IP addresses, privacy is a key consideration.
 
-To keep the application secure and simple for users, **Relinkr will use an OAuth-based authentication system**. This means users won't need to create or remember a new password for this service.
+* **Privacy Notice**: If detailed logging is enabled by the instance administrator, the application must display a configurable **privacy policy and/or cookie banner**. This notice will inform end-users (visitors clicking the links) what data is being collected and for what purpose.
+* **Granular Control**: Instance owners will have environment variables to enable/disable detailed logging and IP address collection independently.
 
-#### Strategy & Technology
+***
 
-We will use the **`NextAuth.js`** (now known as `Auth.js`) library. It's the industry standard for Next.js applications and makes implementing OAuth incredibly simple and secure.
+### 7. Future Enhancements
 
-* **Initial Providers**: To start, we'll support two of the most popular OAuth providers:
-    1.  **GitHub**: Perfect for the developers who will be early adopters.
-    2.  **Google**: A great catch-all for nearly any other user.
-* **Session Management**: `NextAuth.js` will handle all session management automatically using secure, http-only cookies. This keeps users logged in as they navigate the app.
+This section outlines potential features and improvements for future versions of Relinkr.
 
----
-
-### 8. User Authentication Flow
-
-1.  A new user visits the site and clicks "Login / Sign Up".
-2.  They are presented with two options: "Continue with GitHub" and "Continue with Google".
-3.  The user is redirected to their chosen provider (e.g., Google's login page).
-4.  After successfully authenticating with the provider, they are redirected back to the Relinkr dashboard.
-5.  On the backend, `NextAuth.js` creates a session and a unique user ID (e.g., `google-1092837465`).
-
----
-
-### 9. Impact on Data Model
-
-The `userId` provided by `NextAuth.js` is the key that links a user to their data in Redis.
-
-* When a logged-in user creates a new link with the slug `spring-sale`, we will update the Redis Set for that user:
-    * **Command**: `SADD user:google-1092837465:links "spring-sale"`
-* When that user visits their dashboard, the application will query that specific key to retrieve and display all of their links.
+1.  **Bad Link (404) Checker**
+    * **Problem**: Users may inadvertently create links to pages that are temporarily down or no longer exist, leading to a poor user experience.
+    * **Solution**: Implement an optional, asynchronous background job that periodically scans all stored long URLs. If a URL returns a `404 Not Found` or other critical error status, it will be flagged in the user's dashboard, allowing them to correct it.
+2.  **Advanced Analytics Dashboard**
+    * **Description**: A dedicated dashboard page where users can visualize the traffic their links are receiving.
+    * **Potential Metrics**:
+        * Click trends over time (daily, weekly, monthly graphs).
+        * Geographic heatmap of clicks by country or city.
+        * Top 5 referrers sending traffic to their links.
+        * A breakdown of traffic by device type (mobile vs. desktop) and browser.
+3.  **Pluggable Database Backend**
+    * **Description**: Provide the flexibility for an administrator to choose their database backend upon setup. The default would be Redis for its speed and simplicity.
+    * **Solution**: This would involve creating a data abstraction layer (e.g., a "repository pattern") in the application code. This layer would provide a consistent interface for querying data, while the underlying implementation would handle the specific logic for either Redis or MongoDB.
+4.  **API Keys for Programmatic Access**
+    * **Description**: Allow users to generate personal API keys from their dashboard. This would empower them to integrate Relinkr into their own applications, scripts, or CI/CD pipelines to programmatically create and manage links.
+5.  **Custom Social Media Previews (OG Tags)**
+    * **Description**: Enable users to define a custom title, description, and preview image for each link. When the short link is shared on platforms like Twitter, Facebook, or Slack, it would display this custom preview instead of the destination page's content.
