@@ -13,15 +13,25 @@ export const authOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
   ],
-  pages: {
-    signIn: '/api/auth/signin',
-  },
   callbacks: {
     async redirect({ url, baseUrl }: { url: string; baseUrl: string }) {
+      // Prevent signin page redirecting to itself
+      if (url.includes('/api/auth/signin')) {
+        return baseUrl;
+      }
+      
+      // Handle sign-out redirects
+      if (url.includes('/api/auth/signout')) {
+        return `${baseUrl}/api/auth/signin`;
+      }
+      
       // Allows relative callback URLs
       if (url.startsWith("/")) return `${baseUrl}${url}`;
+      
       // Allows callback URLs on the same origin
-      else if (new URL(url).origin === baseUrl) return url;
+      if (new URL(url).origin === baseUrl) return url;
+      
+      // Default to home page for successful sign-ins
       return baseUrl;
     },
   },

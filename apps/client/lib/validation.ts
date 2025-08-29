@@ -11,10 +11,16 @@ export const createLinkSchema = z.object({
     }),
   customSlug: z
     .string()
-    .min(4, 'Custom slug must be at least 4 characters')
-    .max(25, 'Custom slug must be at most 25 characters')
-    .regex(/^[a-zA-Z0-9_-]+$/, 'Custom slug can only contain letters, numbers, hyphens, and underscores')
-    .optional(),
+    .optional()
+    .refine((val) => !val || val.length >= 4, {
+      message: 'Custom slug must be at least 4 characters',
+    })
+    .refine((val) => !val || val.length <= 25, {
+      message: 'Custom slug must be at most 25 characters',
+    })
+    .refine((val) => !val || /^[a-zA-Z0-9_-]+$/.test(val), {
+      message: 'Custom slug can only contain letters, numbers, hyphens, and underscores',
+    }),
 });
 
 // Schema for updating a link
@@ -47,6 +53,8 @@ export const listLinksSchema = z.object({
   search: z.string().optional(),
   page: z.coerce.number().min(1).default(1),
   limit: z.coerce.number().min(1).max(100).default(10),
+  sortField: z.enum(['slug', 'longUrl', 'clicks']).optional(),
+  sortDirection: z.enum(['asc', 'desc']).optional(),
 });
 
 // Type exports for TypeScript

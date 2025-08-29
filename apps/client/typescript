@@ -809,4 +809,847 @@ exit
  GET /my1stlink [34m307[39m in 389ms
  GET / [34m307[39m in 350ms
  GET /api/auth/signin [34m304[39m in 101ms
- POST /api/auth/signin/github [34m302[
+ POST /api/auth/signin/github [34m302[39m in 101ms
+ GET /api/auth/callback/github?code=b7c8c771a912400f1e18&state=lak70tu0HmdeC2qAJYMa2Y4v2zs4wwUvsPEnyq5uc6w [34m302[39m in 975ms
+ GET /api/auth/signin [34m304[39m in 100ms
+ GET / [34m307[39m in 310ms
+ GET /api/auth/signin [32m200[39m in 114ms
+ GET /favicon.ico [32m200[39m in 511ms
+ POST /api/auth/signin/google [34m302[39m in 187ms
+ GET /api/auth/callback/google?state=-KN7DMNXpAFrGse05yqTgg-OeoNNxmvk8WZaZr5DG7k&code=4%2F0AVMBsJjMTPDhtulFQKCbByxCtBOUDlI6gKSgrztTMnZ3hav7tyHyxpfXUs3soisX8_JiCA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent [34m302[39m in 386ms
+ GET / [32m200[39m in 438ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 180ms
+ GET /favicon.ico [32m200[39m in 559ms
+ GET / [32m200[39m in 312ms
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 135ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 10.4s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.3s
+ GET / [32m200[39m in 5481ms
+ GET / [32m200[39m in 5535ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 2375ms
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 2375ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 2.9s
+ GET /favicon.ico [32m200[39m in 3916ms
+ GET /favicon.ico [32m200[39m in 3819ms
+ GET / [32m200[39m in 347ms
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 142ms
+ GET /favicon.ico [32m200[39m in 501ms
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 133ms
+ GET /api/auth/csrf [32m200[39m in 155ms
+ POST /api/auth/signout [32m200[39m in 128ms
+ GET /api/auth/signin [34m302[39m in 158ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 121ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 114ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 118ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 137ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 124ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 134ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 173ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 168ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 125ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 126ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 135ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 153ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 164ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 179ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 184ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 168ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 171ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 162ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 172ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 148ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 131ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 180ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 177ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 188ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 159ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 179ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 194ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 219ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 214ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 192ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 181ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 188ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 196ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 194ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 181ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 195ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 202ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 174ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 276ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 10.1s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.3s
+ GET / [32m200[39m in 6307ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 2777ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 3.3s
+ GET /favicon.ico [32m200[39m in 4232ms
+ GET / [32m200[39m in 413ms
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 129ms
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 159ms
+ GET /api/auth/csrf [34m304[39m in 161ms
+ POST /api/auth/signout [32m200[39m in 123ms
+ GET /api/auth/signin [34m302[39m in 141ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 130ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 119ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 163ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 110ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 117ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 117ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 116ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 158ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 146ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 117ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 120ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 115ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 121ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 114ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 117ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 119ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 112ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 123ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 119ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 104ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 119ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 117ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 111ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 131ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 11.8s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 3s
+ GET / [34m307[39m in 6789ms
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 193ms
+ GET /api/auth/signin [34m302[39m in 294ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 112ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 137ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 118ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 109ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 116ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 115ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 129ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 113ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 127ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 125ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 109ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 120ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 146ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 182ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 182ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 141ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 125ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 113ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 96ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 101ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 105ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 114ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 127ms
+ GET /api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fsignin [34m302[39m in 120ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 11.6s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.2s
+ GET / [34m307[39m in 5336ms
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 170ms
+ GET /api/auth/signin [32m200[39m in 267ms
+ POST /api/auth/signin/github [34m302[39m in 101ms
+ GET /api/auth/callback/github?code=3de1256882b8f2b6f88f&state=l3gtZN4IJUbqTSWOdEos7_Ys-EU3m4LS7YkSa7l4V2A [34m302[39m in 1012ms
+ GET / [32m200[39m in 265ms
+ [32m[1m✓[22m[39m Compiled /api/links/list in 155ms
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 1102ms
+ GET / [34m307[39m in 329ms
+ GET /api/auth/signin [32m200[39m in 110ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 1893ms
+ POST /api/auth/signin/google [34m302[39m in 202ms
+ GET /favicon.ico [32m200[39m in 2807ms
+ GET /api/auth/callback/google?state=NcI9EMrdHQRchham9ZcHlfvrW9CNHaj5uDmrf5rucSg&code=4%2F0AVMBsJgdMmb3mItlcFyDNwuVsIJlyxuoBZlbF-055NYCytUy_lFwt___v0-XrUQMFeDbtQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&hd=shalusri.com&prompt=consent [34m302[39m in 382ms
+ GET / [32m200[39m in 480ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 166ms
+ GET /favicon.ico [32m200[39m in 543ms
+ [32m[1m✓[22m[39m Compiled /api/links/create in 185ms
+ POST /api/links/create [33m400[39m in 206ms
+ POST /api/links/create [33m409[39m in 128ms
+ POST /api/links/create [32m201[39m in 154ms
+ POST /api/links/create [33m400[39m in 151ms
+ POST /api/links/create [33m400[39m in 128ms
+ POST /api/links/create [33m400[39m in 120ms
+ POST /api/links/create [33m400[39m in 176ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 16.5s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.9s
+ GET / [32m200[39m in 6843ms
+ GET / [32m200[39m in 6861ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 2424ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 2422ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 3s
+ GET /favicon.ico [32m200[39m in 3850ms
+ [32m[1m✓[22m[39m Compiled /api/links/create in 191ms
+ POST /api/links/create [32m201[39m in 219ms
+ POST /api/links/create [32m201[39m in 187ms
+ POST /api/links/create [32m201[39m in 140ms
+ POST /api/links/create [32m201[39m in 129ms
+ POST /api/links/create [32m201[39m in 141ms
+ POST /api/links/create [32m201[39m in 152ms
+ POST /api/links/create [32m201[39m in 138ms
+ POST /api/links/create [32m201[39m in 129ms
+ POST /api/links/create [32m201[39m in 136ms
+ [32m[1m✓[22m[39m Compiled /[slug] in 307ms
+ GET /hBcpn3X4Ov [34m307[39m in 612ms
+ GET /TMYDXwKh5B [34m307[39m in 365ms
+ GET /sslink [34m307[39m in 324ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 12.4s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.7s
+ GET / [32m200[39m in 6776ms
+ GET / [32m200[39m in 6752ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 2559ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 2557ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 3.1s
+ GET /favicon.ico [32m200[39m in 3976ms
+ [32m[1m✓[22m[39m Compiled /[slug] in 295ms
+ GET /sslink [34m307[39m in 541ms
+ GET / [32m200[39m in 403ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 180ms
+ GET /favicon.ico [32m200[39m in 553ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 12.4s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 3s
+ GET / [32m200[39m in 7394ms
+ GET / [32m200[39m in 7424ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET / [32m200[39m in 878ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 2426ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 2419ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 3.3s
+ GET /favicon.ico [32m200[39m in 3882ms
+ GET /favicon.ico [32m200[39m in 4148ms
+ GET /api/analytics/counts?slugs=ZumyN-&slugs=zjcCqb&slugs=Z9SnRNqaCs&slugs=Z8ONOD&slugs=YUwhCk&slugs=YQUsL4&slugs=xzqAqy&slugs=XyApfM&slugs=wrP6xr&slugs=wd_O-o [32m200[39m in 821ms
+ GET /api/analytics/counts?slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=hBcpn3X4Ov&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=6QzxA7Yjvu&slugs=23pjFOSsRS&slugs=_6toYtlZiD [32m200[39m in 843ms
+ GET /favicon.ico [32m200[39m in 545ms
+ [32m[1m✓[22m[39m Compiled /[slug] in 280ms
+ GET /Z8ONOD [34m307[39m in 514ms
+ GET /YUwhCk [34m307[39m in 312ms
+ GET /api/analytics/counts?slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=hBcpn3X4Ov&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=6QzxA7Yjvu&slugs=23pjFOSsRS&slugs=_6toYtlZiD [34m304[39m in 145ms
+ GET /api/analytics/counts?slugs=ZumyN-&slugs=zjcCqb&slugs=Z9SnRNqaCs&slugs=Z8ONOD&slugs=YUwhCk&slugs=YQUsL4&slugs=xzqAqy&slugs=XyApfM&slugs=wrP6xr&slugs=wd_O-o [32m200[39m in 166ms
+ GET /YUwhCk [34m307[39m in 351ms
+ GET /hBcpn3X4Ov [34m307[39m in 320ms
+ GET /api/analytics/counts?slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=hBcpn3X4Ov&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=6QzxA7Yjvu&slugs=23pjFOSsRS&slugs=_6toYtlZiD [32m200[39m in 203ms
+ GET /api/analytics/counts?slugs=ZumyN-&slugs=zjcCqb&slugs=Z9SnRNqaCs&slugs=Z8ONOD&slugs=YUwhCk&slugs=YQUsL4&slugs=xzqAqy&slugs=XyApfM&slugs=wrP6xr&slugs=wd_O-o [32m200[39m in 229ms
+ [32m[1m✓[22m[39m Compiled /api/links/create in 163ms
+ POST /api/links/create [32m201[39m in 189ms
+ GET /api/analytics/counts?slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=hBcpn3X4Ov&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=6QzxA7Yjvu&slugs=23pjFOSsRS&slugs=_6toYtlZiD [32m200[39m in 130ms
+ POST /api/links/create [32m201[39m in 130ms
+ GET /api/analytics/counts?slugs=AWNnAcjJAb&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=hBcpn3X4Ov&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=6QzxA7Yjvu&slugs=23pjFOSsRS&slugs=_6toYtlZiD [32m200[39m in 122ms
+ GET /api/analytics/counts?slugs=ZumyN-&slugs=zjcCqb&slugs=Z9SnRNqaCs&slugs=Z8ONOD&slugs=YUwhCk&slugs=YQUsL4&slugs=xzqAqy&slugs=XyApfM&slugs=wrP6xr&slugs=wd_O-o [34m304[39m in 127ms
+ POST /api/links/create [32m201[39m in 131ms
+ GET /api/analytics/counts?slugs=mylink5&slugs=AWNnAcjJAb&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=hBcpn3X4Ov&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=6QzxA7Yjvu&slugs=23pjFOSsRS&slugs=_6toYtlZiD [32m200[39m in 123ms
+ POST /api/links/create [32m201[39m in 139ms
+ GET /api/analytics/counts?slugs=mylink4&slugs=mylink5&slugs=AWNnAcjJAb&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=hBcpn3X4Ov&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=6QzxA7Yjvu&slugs=23pjFOSsRS&slugs=_6toYtlZiD [32m200[39m in 131ms
+ POST /api/links/create [32m201[39m in 125ms
+ GET /api/analytics/counts?slugs=mylink3&slugs=mylink4&slugs=mylink5&slugs=AWNnAcjJAb&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=hBcpn3X4Ov&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=6QzxA7Yjvu&slugs=23pjFOSsRS&slugs=_6toYtlZiD [32m200[39m in 123ms
+ POST /api/links/create [33m409[39m in 140ms
+ POST /api/links/create [32m201[39m in 89ms
+ GET /api/analytics/counts?slugs=mylink22&slugs=mylink3&slugs=mylink4&slugs=mylink5&slugs=AWNnAcjJAb&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=hBcpn3X4Ov&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=6QzxA7Yjvu&slugs=23pjFOSsRS&slugs=_6toYtlZiD [32m200[39m in 155ms
+ GET /api/analytics/counts?slugs=ZumyN-&slugs=zjcCqb&slugs=Z9SnRNqaCs&slugs=Z8ONOD&slugs=YUwhCk&slugs=YQUsL4&slugs=xzqAqy&slugs=XyApfM&slugs=wrP6xr&slugs=wd_O-o [34m304[39m in 137ms
+ [32m[1m✓[22m[39m Compiled /api/links/update in 162ms
+ POST /api/links/update [32m200[39m in 199ms
+ GET /api/analytics/counts?slugs=mylink22&slugs=mylink3&slugs=mylink4&slugs=mylink5&slugs=AWNnAcjJAb&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=hBcpn3X4Ov&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=6QzxA7Yjvu&slugs=23pjFOSsRS&slugs=_6toYtlZiD [34m304[39m in 136ms
+ GET / [32m200[39m in 333ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 167ms
+ GET /favicon.ico [32m200[39m in 566ms
+ GET /api/analytics/counts?slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=mylink5&slugs=mylink4&slugs=mylink3&slugs=mylink22&slugs=hBcpn3X4Ov [32m200[39m in 172ms
+ GET /mylink22 [34m307[39m in 320ms
+ GET / [32m200[39m in 398ms
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 153ms
+ GET /favicon.ico [32m200[39m in 539ms
+ GET /api/analytics/counts?slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=mylink5&slugs=mylink4&slugs=mylink3&slugs=mylink22&slugs=hBcpn3X4Ov [32m200[39m in 154ms
+ POST /api/links/update [32m200[39m in 133ms
+ GET /api/analytics/counts?slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=mylink5&slugs=mylink4&slugs=mylink3&slugs=mylink22&slugs=hBcpn3X4Ov [34m304[39m in 141ms
+ GET /api/analytics/counts?slugs=ZumyN-&slugs=zjcCqb&slugs=Z9SnRNqaCs&slugs=Z8ONOD&slugs=YUwhCk&slugs=YQUsL4&slugs=xzqAqy&slugs=XyApfM&slugs=wrP6xr&slugs=wd_O-o [34m304[39m in 158ms
+ [32m[1m✓[22m[39m Compiled /api/links/delete in 165ms
+ POST /api/links/delete [32m200[39m in 181ms
+ GET /api/analytics/counts?slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=mylink5&slugs=mylink4&slugs=mylink22&slugs=hBcpn3X4Ov [32m200[39m in 147ms
+ POST /api/links/create [32m201[39m in 131ms
+ GET /api/analytics/counts?slugs=md5LzQWXnA&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=mylink5&slugs=mylink4&slugs=mylink22&slugs=hBcpn3X4Ov [32m200[39m in 127ms
+ POST /api/links/create [32m201[39m in 155ms
+ GET /api/analytics/counts?slugs=en7kwY3tOj&slugs=md5LzQWXnA&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=mylink5&slugs=mylink4&slugs=mylink22&slugs=hBcpn3X4Ov [32m200[39m in 174ms
+ POST /api/links/create [32m201[39m in 162ms
+ GET /api/analytics/counts?slugs=Ulw0F3lk8a&slugs=en7kwY3tOj&slugs=md5LzQWXnA&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=mylink5&slugs=mylink4&slugs=mylink22&slugs=hBcpn3X4Ov [32m200[39m in 154ms
+ GET /api/analytics/counts?slugs=ZumyN-&slugs=zjcCqb&slugs=Z9SnRNqaCs&slugs=Z8ONOD&slugs=YUwhCk&slugs=YQUsL4&slugs=xzqAqy&slugs=XyApfM&slugs=wrP6xr&slugs=wd_O-o [34m304[39m in 203ms
+ POST /api/links/create [32m201[39m in 211ms
+ GET /api/analytics/counts?slugs=0FtSn4I8u3&slugs=Ulw0F3lk8a&slugs=en7kwY3tOj&slugs=md5LzQWXnA&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=mylink5&slugs=mylink4&slugs=mylink22&slugs=hBcpn3X4Ov [32m200[39m in 162ms
+ POST /api/links/create [32m201[39m in 127ms
+ GET /api/analytics/counts?slugs=sQIXbfuSpu&slugs=0FtSn4I8u3&slugs=Ulw0F3lk8a&slugs=en7kwY3tOj&slugs=md5LzQWXnA&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=mylink5&slugs=mylink4&slugs=mylink22&slugs=hBcpn3X4Ov [32m200[39m in 122ms
+ POST /api/links/create [32m201[39m in 165ms
+ GET /api/analytics/counts?slugs=9OAJxhbzBf&slugs=sQIXbfuSpu&slugs=0FtSn4I8u3&slugs=Ulw0F3lk8a&slugs=en7kwY3tOj&slugs=md5LzQWXnA&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=mylink5&slugs=mylink4&slugs=mylink22&slugs=hBcpn3X4Ov [32m200[39m in 134ms
+ GET /api/links/list?q=&page=2&perPage=10 [32m200[39m in 186ms
+ GET /api/analytics/counts?slugs=md5LzQWXnA&slugs=hBcpn3X4Ov&slugs=h1qYchH1WV&slugs=en7kwY3tOj&slugs=AWNnAcjJAb&slugs=9OAJxhbzBf&slugs=6WwCLyn1zZ&slugs=6QzxA7Yjvu&slugs=23pjFOSsRS&slugs=0FtSn4I8u3 [32m200[39m in 130ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 138ms
+ GET /api/analytics/counts?slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=Ulw0F3lk8a&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=sQIXbfuSpu&slugs=mylink5&slugs=mylink4&slugs=mylink22 [32m200[39m in 120ms
+ POST /api/links/create [32m201[39m in 165ms
+ GET /api/analytics/counts?slugs=ICBtMBPgud&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=Ulw0F3lk8a&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=sQIXbfuSpu&slugs=mylink5&slugs=mylink4&slugs=mylink22 [32m200[39m in 149ms
+ POST /api/links/create [32m201[39m in 127ms
+ GET /api/analytics/counts?slugs=sxxlmEOijZ&slugs=ICBtMBPgud&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=Ulw0F3lk8a&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=sQIXbfuSpu&slugs=mylink5&slugs=mylink4&slugs=mylink22 [32m200[39m in 127ms
+ POST /api/links/create [32m201[39m in 188ms
+ GET /api/analytics/counts?slugs=WzIV-d_m_J&slugs=sxxlmEOijZ&slugs=ICBtMBPgud&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=Ulw0F3lk8a&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=sQIXbfuSpu&slugs=mylink5&slugs=mylink4&slugs=mylink22 [32m200[39m in 143ms
+ POST /api/links/create [32m201[39m in 158ms
+ GET /api/analytics/counts?slugs=X96vL-1hq-&slugs=WzIV-d_m_J&slugs=sxxlmEOijZ&slugs=ICBtMBPgud&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=Ulw0F3lk8a&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=sQIXbfuSpu&slugs=mylink5&slugs=mylink4&slugs=mylink22 [32m200[39m in 147ms
+ POST /api/links/create [32m201[39m in 133ms
+ GET /api/analytics/counts?slugs=xiyIbvPdE5&slugs=X96vL-1hq-&slugs=WzIV-d_m_J&slugs=sxxlmEOijZ&slugs=ICBtMBPgud&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=Ulw0F3lk8a&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=sQIXbfuSpu&slugs=mylink5&slugs=mylink4&slugs=mylink22 [32m200[39m in 150ms
+ POST /api/links/create [32m201[39m in 131ms
+ GET /api/analytics/counts?slugs=4_O227Anor&slugs=xiyIbvPdE5&slugs=X96vL-1hq-&slugs=WzIV-d_m_J&slugs=sxxlmEOijZ&slugs=ICBtMBPgud&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=Ulw0F3lk8a&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=sQIXbfuSpu&slugs=mylink5&slugs=mylink4&slugs=mylink22 [32m200[39m in 178ms
+ GET /api/analytics/counts?slugs=ZumyN-&slugs=zjcCqb&slugs=Z9SnRNqaCs&slugs=Z8ONOD&slugs=YUwhCk&slugs=YQUsL4&slugs=xzqAqy&slugs=XyApfM&slugs=wrP6xr&slugs=wd_O-o [34m304[39m in 146ms
+ GET /api/analytics/counts?slugs=4_O227Anor&slugs=xiyIbvPdE5&slugs=X96vL-1hq-&slugs=WzIV-d_m_J&slugs=sxxlmEOijZ&slugs=ICBtMBPgud&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=Ulw0F3lk8a&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=sQIXbfuSpu&slugs=mylink5&slugs=mylink4&slugs=mylink22 [34m304[39m in 167ms
+ GET /api/analytics/counts?slugs=ZumyN-&slugs=zjcCqb&slugs=Z9SnRNqaCs&slugs=Z8ONOD&slugs=YUwhCk&slugs=YQUsL4&slugs=xzqAqy&slugs=XyApfM&slugs=wrP6xr&slugs=wd_O-o [34m304[39m in 201ms
+ GET /api/analytics/counts?slugs=4_O227Anor&slugs=xiyIbvPdE5&slugs=X96vL-1hq-&slugs=WzIV-d_m_J&slugs=sxxlmEOijZ&slugs=ICBtMBPgud&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=Ulw0F3lk8a&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=sQIXbfuSpu&slugs=mylink5&slugs=mylink4&slugs=mylink22 [34m304[39m in 154ms
+ GET /api/analytics/counts?slugs=ZumyN-&slugs=zjcCqb&slugs=Z9SnRNqaCs&slugs=Z8ONOD&slugs=YUwhCk&slugs=YQUsL4&slugs=xzqAqy&slugs=XyApfM&slugs=wrP6xr&slugs=wd_O-o [34m304[39m in 143ms
+ GET /api/analytics/counts?slugs=4_O227Anor&slugs=xiyIbvPdE5&slugs=X96vL-1hq-&slugs=WzIV-d_m_J&slugs=sxxlmEOijZ&slugs=ICBtMBPgud&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=Ulw0F3lk8a&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=sQIXbfuSpu&slugs=mylink5&slugs=mylink4&slugs=mylink22 [34m304[39m in 132ms
+ GET /api/analytics/counts?slugs=ZumyN-&slugs=zjcCqb&slugs=Z9SnRNqaCs&slugs=Z8ONOD&slugs=YUwhCk&slugs=YQUsL4&slugs=xzqAqy&slugs=XyApfM&slugs=wrP6xr&slugs=wd_O-o [34m304[39m in 231ms
+ GET /api/analytics/counts?slugs=4_O227Anor&slugs=xiyIbvPdE5&slugs=X96vL-1hq-&slugs=WzIV-d_m_J&slugs=sxxlmEOijZ&slugs=ICBtMBPgud&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=Ulw0F3lk8a&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=sQIXbfuSpu&slugs=mylink5&slugs=mylink4&slugs=mylink22 [34m304[39m in 186ms
+ GET /api/analytics/counts?slugs=ZumyN-&slugs=zjcCqb&slugs=Z9SnRNqaCs&slugs=Z8ONOD&slugs=YUwhCk&slugs=YQUsL4&slugs=xzqAqy&slugs=XyApfM&slugs=wrP6xr&slugs=wd_O-o [34m304[39m in 268ms
+ GET /api/analytics/counts?slugs=4_O227Anor&slugs=xiyIbvPdE5&slugs=X96vL-1hq-&slugs=WzIV-d_m_J&slugs=sxxlmEOijZ&slugs=ICBtMBPgud&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=Ulw0F3lk8a&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=sQIXbfuSpu&slugs=mylink5&slugs=mylink4&slugs=mylink22 [34m304[39m in 156ms
+ GET /api/analytics/counts?slugs=ZumyN-&slugs=zjcCqb&slugs=Z9SnRNqaCs&slugs=Z8ONOD&slugs=YUwhCk&slugs=YQUsL4&slugs=xzqAqy&slugs=XyApfM&slugs=wrP6xr&slugs=wd_O-o [34m304[39m in 168ms
+ GET /api/analytics/counts?slugs=4_O227Anor&slugs=xiyIbvPdE5&slugs=X96vL-1hq-&slugs=WzIV-d_m_J&slugs=sxxlmEOijZ&slugs=ICBtMBPgud&slugs=zzolxmImIq&slugs=w5mR2yxtJn&slugs=Ulw0F3lk8a&slugs=TMYDXwKh5B&slugs=sslink&slugs=SS1zzCtHN2&slugs=sQIXbfuSpu&slugs=mylink5&slugs=mylink4&slugs=mylink22 [34m304[39m in 194ms
+ GET /api/analytics/counts?slugs=ZumyN-&slugs=zjcCqb&slugs=Z9SnRNqaCs&slugs=Z8ONOD&slugs=YUwhCk&slugs=YQUsL4&slugs=xzqAqy&slugs=XyApfM&slugs=wrP6xr&slugs=wd_O-o [34m304[39m in 248ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 12.6s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.7s
+ GET / [32m200[39m in 6335ms
+ GET / [32m200[39m in 6714ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 2589ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 2586ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 3.4s
+ GET /favicon.ico [32m200[39m in 4303ms
+ GET /favicon.ico [32m200[39m in 4189ms
+ GET /api/analytics/counts?slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW&slugs=EOs-DVorcM&slugs=N5GdZ115UF&slugs=4_O227Anor&slugs=xiyIbvPdE5&slugs=X96vL-1hq-&slugs=WzIV-d_m_J [32m200[39m in 902ms
+ GET /api/analytics/counts?slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs&slugs=Pe-PyCHg2G&slugs=sbG5RT7Mkj&slugs=t3xJKz2VTu&slugs=mylink [32m200[39m in 929ms
+ [32m[1m✓[22m[39m Compiled /api/links/create in 165ms
+ POST /api/links/create [32m201[39m in 229ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 154ms
+ GET /api/analytics/counts?slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW&slugs=EOs-DVorcM&slugs=N5GdZ115UF&slugs=4_O227Anor&slugs=xiyIbvPdE5&slugs=X96vL-1hq- [32m200[39m in 148ms
+ POST /api/links/create [32m201[39m in 140ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 170ms
+ GET /api/analytics/counts?slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW&slugs=EOs-DVorcM&slugs=N5GdZ115UF&slugs=4_O227Anor&slugs=xiyIbvPdE5 [32m200[39m in 164ms
+ [32m[1m✓[22m[39m Compiled /[slug] in 309ms
+ GET /yjKay2Acxi [34m307[39m in 565ms
+ POST /api/links/create [33m400[39m in 174ms
+ GET /api/analytics/counts?slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs&slugs=Pe-PyCHg2G&slugs=sbG5RT7Mkj&slugs=t3xJKz2VTu&slugs=mylink [34m304[39m in 156ms
+ GET /api/analytics/counts?slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW&slugs=EOs-DVorcM&slugs=N5GdZ115UF&slugs=4_O227Anor&slugs=xiyIbvPdE5 [32m200[39m in 122ms
+ POST /api/links/create [32m201[39m in 181ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 130ms
+ GET /api/analytics/counts?slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW&slugs=EOs-DVorcM&slugs=N5GdZ115UF&slugs=4_O227Anor [32m200[39m in 145ms
+ GET /api/analytics/counts?slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs&slugs=Pe-PyCHg2G&slugs=sbG5RT7Mkj&slugs=t3xJKz2VTu&slugs=mylink [34m304[39m in 125ms
+ GET /api/analytics/counts?slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW&slugs=EOs-DVorcM&slugs=N5GdZ115UF&slugs=4_O227Anor [34m304[39m in 155ms
+ GET /api/analytics/counts?slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs&slugs=Pe-PyCHg2G&slugs=sbG5RT7Mkj&slugs=t3xJKz2VTu&slugs=mylink [34m304[39m in 126ms
+ GET /api/analytics/counts?slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW&slugs=EOs-DVorcM&slugs=N5GdZ115UF&slugs=4_O227Anor [34m304[39m in 167ms
+ GET /api/analytics/counts?slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs&slugs=Pe-PyCHg2G&slugs=sbG5RT7Mkj&slugs=t3xJKz2VTu&slugs=mylink [34m304[39m in 123ms
+ GET /api/analytics/counts?slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW&slugs=EOs-DVorcM&slugs=N5GdZ115UF&slugs=4_O227Anor [34m304[39m in 119ms
+ POST /api/links/create [32m201[39m in 141ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 139ms
+ GET /api/analytics/counts?slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW&slugs=EOs-DVorcM&slugs=N5GdZ115UF [32m200[39m in 113ms
+ GET /yjKay2Acxi [34m307[39m in 324ms
+ GET /api/analytics/counts?slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs&slugs=Pe-PyCHg2G&slugs=sbG5RT7Mkj&slugs=t3xJKz2VTu&slugs=mylink [34m304[39m in 138ms
+ POST /api/links/create [32m201[39m in 132ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 154ms
+ GET /api/analytics/counts?slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW&slugs=EOs-DVorcM [32m200[39m in 113ms
+ POST /api/links/create [32m201[39m in 161ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 151ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [32m200[39m in 141ms
+ GET /api/analytics/counts?slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs&slugs=Pe-PyCHg2G&slugs=sbG5RT7Mkj&slugs=t3xJKz2VTu&slugs=mylink [34m304[39m in 129ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 128ms
+ GET /api/analytics/counts?slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs&slugs=Pe-PyCHg2G&slugs=sbG5RT7Mkj&slugs=t3xJKz2VTu&slugs=mylink [34m304[39m in 136ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 126ms
+ GET /api/analytics/counts?slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs&slugs=Pe-PyCHg2G&slugs=sbG5RT7Mkj&slugs=t3xJKz2VTu&slugs=mylink [34m304[39m in 128ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 149ms
+ GET /api/analytics/counts?slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs&slugs=Pe-PyCHg2G&slugs=sbG5RT7Mkj&slugs=t3xJKz2VTu&slugs=mylink [34m304[39m in 135ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 127ms
+ GET /api/analytics/counts?slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs&slugs=Pe-PyCHg2G&slugs=sbG5RT7Mkj&slugs=t3xJKz2VTu&slugs=mylink [34m304[39m in 207ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 162ms
+ GET /api/analytics/counts?slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs&slugs=Pe-PyCHg2G&slugs=sbG5RT7Mkj&slugs=t3xJKz2VTu&slugs=mylink [34m304[39m in 212ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 208ms
+ GET /api/analytics/counts?slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs&slugs=Pe-PyCHg2G&slugs=sbG5RT7Mkj&slugs=t3xJKz2VTu&slugs=mylink [34m304[39m in 192ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 249ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K [33m[1m⚠[22m[39m Port 3000 is in use by an unknown process, using available port 3002 instead.
+   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3002
+   - Network:      http://10.255.255.254:3002
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 15.2s
+ [37m[1m○[22m[39m Compiling /api/analytics/counts ...
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 4619ms
+ [32m[1m✓[22m[39m Compiled /api/analytics/counts in 6.3s
+ GET / [32m200[39m in 7153ms
+ GET / [32m200[39m in 7208ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 1028ms
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 1131ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 296ms
+ GET /api/analytics/counts?slugs=jVWxN9kZbk&slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs&slugs=Pe-PyCHg2G&slugs=sbG5RT7Mkj&slugs=t3xJKz2VTu [34m304[39m in 285ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 2.5s
+ GET /favicon.ico [32m200[39m in 3444ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=asc [32m200[39m in 128ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=twMsfM&slugs=xzqAqy&slugs=kE_MaM&slugs=sXU9EF&slugs=5P9UxY&slugs=XyApfM&slugs=NjSWzY&slugs=gU6-NH [32m200[39m in 118ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=desc [32m200[39m in 131ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=twMsfM&slugs=xzqAqy&slugs=kE_MaM&slugs=sXU9EF&slugs=5P9UxY&slugs=XyApfM&slugs=NjSWzY&slugs=gU6-NH [34m304[39m in 129ms
+ [32m[1m✓[22m[39m Compiled /[slug] in 288ms
+ GET /twMsfM [34m307[39m in 541ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 155ms
+ GET /twMsfM [34m307[39m in 341ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=twMsfM&slugs=xzqAqy&slugs=kE_MaM&slugs=sXU9EF&slugs=5P9UxY&slugs=XyApfM&slugs=NjSWzY&slugs=gU6-NH [32m200[39m in 128ms
+ [32m[1m✓[22m[39m Compiled /api/links/create in 230ms
+ POST /api/links/create [32m201[39m in 273ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=desc [32m200[39m in 146ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=twMsfM&slugs=xzqAqy&slugs=kE_MaM&slugs=sXU9EF&slugs=5P9UxY&slugs=XyApfM&slugs=NjSWzY&slugs=gU6-NH [34m304[39m in 152ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 131ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=twMsfM&slugs=xzqAqy&slugs=kE_MaM&slugs=sXU9EF&slugs=5P9UxY&slugs=XyApfM&slugs=NjSWzY&slugs=gU6-NH [34m304[39m in 131ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 128ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=twMsfM&slugs=xzqAqy&slugs=kE_MaM&slugs=sXU9EF&slugs=5P9UxY&slugs=XyApfM&slugs=NjSWzY&slugs=gU6-NH [34m304[39m in 129ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 154ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=twMsfM&slugs=xzqAqy&slugs=kE_MaM&slugs=sXU9EF&slugs=5P9UxY&slugs=XyApfM&slugs=NjSWzY&slugs=gU6-NH [34m304[39m in 145ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 167ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=twMsfM&slugs=xzqAqy&slugs=kE_MaM&slugs=sXU9EF&slugs=5P9UxY&slugs=XyApfM&slugs=NjSWzY&slugs=gU6-NH [34m304[39m in 224ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K [33m[1m⚠[22m[39m Port 3000 is in use by an unknown process, using available port 3002 instead.
+   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3002
+   - Network:      http://10.255.255.254:3002
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 15.1s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.7s
+ GET / [32m200[39m in 6945ms
+ GET / [32m200[39m in 6912ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 2536ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 2535ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 3.3s
+ GET /api/analytics/counts?slugs=Nit3ouMym1&slugs=jVWxN9kZbk&slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs&slugs=Pe-PyCHg2G&slugs=sbG5RT7Mkj [32m200[39m in 286ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 307ms
+ GET /favicon.ico [32m200[39m in 4209ms
+ [32m[1m✓[22m[39m Compiled /api/links/create in 261ms
+ POST /api/links/create [32m201[39m in 291ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 192ms
+ GET /api/analytics/counts?slugs=hnReZ6g4W4&slugs=Nit3ouMym1&slugs=jVWxN9kZbk&slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs&slugs=Pe-PyCHg2G [32m200[39m in 200ms
+ POST /api/links/create [32m201[39m in 192ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 207ms
+ GET /api/analytics/counts?slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1&slugs=jVWxN9kZbk&slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs [32m200[39m in 191ms
+ [32m[1m✓[22m[39m Compiled /[slug] in 284ms
+ GET /hnReZ6g4W4 [34m307[39m in 522ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 154ms
+ GET /api/analytics/counts?slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1&slugs=jVWxN9kZbk&slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs [32m200[39m in 138ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 130ms
+ GET /api/analytics/counts?slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1&slugs=jVWxN9kZbk&slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs [34m304[39m in 132ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 129ms
+ GET /api/analytics/counts?slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1&slugs=jVWxN9kZbk&slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs [34m304[39m in 177ms
+ GET /hnReZ6g4W4 [34m307[39m in 364ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 190ms
+ POST /api/links/create [32m201[39m in 144ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 149ms
+ GET /api/analytics/counts?slugs=kiU_2GRPsF&slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1&slugs=jVWxN9kZbk&slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku [32m200[39m in 118ms
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 168ms
+ GET /api/auth/csrf [32m200[39m in 180ms
+ POST /api/auth/signout [32m200[39m in 150ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 116ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 141ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 131ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 121ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 123ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 132ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K [33m[1m⚠[22m[39m Port 3000 is in use by an unknown process, using available port 3002 instead.
+   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3002
+   - Network:      http://10.255.255.254:3002
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 13.3s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.8s
+ GET / [32m200[39m in 6890ms
+ GET / [32m200[39m in 6922ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 2254ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 2252ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 3s
+ GET /api/analytics/counts?slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1&slugs=jVWxN9kZbk&slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku&slugs=Z9SnRNqaCs [32m200[39m in 267ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 289ms
+ GET /favicon.ico [32m200[39m in 3869ms
+ [32m[1m✓[22m[39m Compiled /api/links/create in 164ms
+ POST /api/links/create [32m201[39m in 200ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 141ms
+ GET /api/analytics/counts?slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1&slugs=jVWxN9kZbk&slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht&slugs=mWrCBcRbku [32m200[39m in 125ms
+ POST /api/links/create [32m201[39m in 149ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 125ms
+ GET /api/analytics/counts?slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1&slugs=jVWxN9kZbk&slugs=mylink2&slugs=CEigd75GUD&slugs=link1&slugs=KJ5zTR2Xht [32m200[39m in 126ms
+ POST /api/links/create [32m201[39m in 139ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 127ms
+ GET /api/analytics/counts?slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1&slugs=jVWxN9kZbk&slugs=mylink2&slugs=CEigd75GUD&slugs=link1 [32m200[39m in 126ms
+ POST /api/links/create [32m201[39m in 192ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 164ms
+ GET /api/analytics/counts?slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1&slugs=jVWxN9kZbk&slugs=mylink2&slugs=CEigd75GUD [32m200[39m in 161ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 163ms
+ POST /api/links/create [32m201[39m in 168ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 196ms
+ GET /api/analytics/counts?slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1&slugs=jVWxN9kZbk&slugs=mylink2 [32m200[39m in 160ms
+ POST /api/links/create [32m201[39m in 129ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 137ms
+ GET /api/analytics/counts?slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1&slugs=jVWxN9kZbk [32m200[39m in 115ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=asc [32m200[39m in 130ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=twMsfM&slugs=xzqAqy&slugs=kE_MaM&slugs=sXU9EF&slugs=5P9UxY&slugs=XyApfM&slugs=NjSWzY&slugs=gU6-NH [34m304[39m in 118ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=desc [32m200[39m in 144ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=twMsfM&slugs=xzqAqy&slugs=kE_MaM&slugs=sXU9EF&slugs=5P9UxY&slugs=XyApfM&slugs=NjSWzY&slugs=gU6-NH [34m304[39m in 182ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 128ms
+ GET /api/links/list?q=m&page=1&perPage=10&sortField=clicks&sortDirection=desc [32m200[39m in 129ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=twMsfM&slugs=xzqAqy&slugs=kE_MaM&slugs=sXU9EF&slugs=5P9UxY&slugs=XyApfM&slugs=NjSWzY&slugs=gU6-NH [34m304[39m in 153ms
+ GET /api/links/list?q=my&page=1&perPage=10&sortField=clicks&sortDirection=desc [32m200[39m in 174ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=ZumyN-&slugs=mylink&slugs=mylink2&slugs=mymylink [32m200[39m in 170ms
+ GET /api/links/list?q=my&page=1&perPage=10&sortField=clicks&sortDirection=asc [32m200[39m in 138ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=ZumyN-&slugs=mylink&slugs=mylink2&slugs=mymylink [34m304[39m in 122ms
+ GET /api/links/list?q=my&page=1&perPage=10&sortField=clicks&sortDirection=desc [34m304[39m in 195ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=ZumyN-&slugs=mylink&slugs=mylink2&slugs=mymylink [34m304[39m in 165ms
+ GET /api/links/list?q=my&page=1&perPage=10&sortField=clicks&sortDirection=asc [34m304[39m in 124ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=ZumyN-&slugs=mylink&slugs=mylink2&slugs=mymylink [34m304[39m in 126ms
+ GET /api/links/list?q=my&page=1&perPage=10&sortField=clicks&sortDirection=desc [34m304[39m in 130ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=ZumyN-&slugs=mylink&slugs=mylink2&slugs=mymylink [34m304[39m in 128ms
+ GET /api/links/list?q=my&page=1&perPage=10&sortField=longUrl&sortDirection=asc [32m200[39m in 116ms
+ GET /api/analytics/counts?slugs=ZumyN-&slugs=mylink&slugs=mylink2&slugs=mymylink&slugs=my1stlink&slugs=my2ndlink [32m200[39m in 121ms
+ GET /api/links/list?q=my&page=1&perPage=10&sortField=longUrl&sortDirection=desc [32m200[39m in 163ms
+ GET /api/analytics/counts?slugs=my2ndlink&slugs=my1stlink&slugs=ZumyN-&slugs=mylink&slugs=mylink2&slugs=mymylink [32m200[39m in 126ms
+ GET /api/links/list?q=my&page=1&perPage=10&sortField=slug&sortDirection=asc [32m200[39m in 122ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=mylink&slugs=mylink2&slugs=mymylink&slugs=ZumyN- [32m200[39m in 136ms
+ GET /api/links/list?q=my&page=1&perPage=10&sortField=slug&sortDirection=desc [32m200[39m in 125ms
+ GET /api/analytics/counts?slugs=ZumyN-&slugs=mymylink&slugs=mylink2&slugs=mylink&slugs=my2ndlink&slugs=my1stlink [32m200[39m in 145ms
+ GET /api/links/list?q=my&page=1&perPage=10&sortField=slug&sortDirection=asc [34m304[39m in 130ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=mylink&slugs=mylink2&slugs=mymylink&slugs=ZumyN- [34m304[39m in 124ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 142ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=mylink&slugs=mylink2&slugs=mymylink&slugs=ZumyN- [34m304[39m in 131ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 127ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=mylink&slugs=mylink2&slugs=mymylink&slugs=ZumyN- [34m304[39m in 223ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 228ms
+ GET /api/analytics/counts?slugs=my1stlink&slugs=my2ndlink&slugs=mylink&slugs=mylink2&slugs=mymylink&slugs=ZumyN- [34m304[39m in 157ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 220ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K [33m[1m⚠[22m[39m Port 3000 is in use by an unknown process, using available port 3002 instead.
+   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3002
+   - Network:      http://10.255.255.254:3002
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 11.3s
+ [37m[1m○[22m[39m Compiling / ...
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 5122ms
+ [32m[1m✓[22m[39m Compiled / in 7.3s
+ GET / [32m200[39m in 8578ms
+ GET / [32m200[39m in 8611ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 1218ms
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 1372ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 300ms
+ GET /api/analytics/counts?slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1&slugs=jVWxN9kZbk [34m304[39m in 352ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 2.7s
+ GET /favicon.ico [32m200[39m in 3746ms
+ GET /api/links/list?q=m&page=1&perPage=10 [32m200[39m in 186ms
+ GET /api/links/list?q=my&page=1&perPage=10 [32m200[39m in 211ms
+ GET /api/analytics/counts?slugs=mymylink&slugs=mylink2&slugs=mylink&slugs=ZumyN-&slugs=my2ndlink&slugs=my1stlink [32m200[39m in 159ms
+ [32m[1m✓[22m[39m Compiled /api/links/create in 163ms
+ POST /api/links/create [32m201[39m in 219ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 131ms
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 155ms
+ GET /api/analytics/counts?slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1 [32m200[39m in 171ms
+ GET /api/analytics/counts?slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1 [34m304[39m in 124ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 129ms
+ GET /api/analytics/counts?slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1 [34m304[39m in 159ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 152ms
+ GET /api/analytics/counts?slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1 [34m304[39m in 178ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 206ms
+ GET /api/analytics/counts?slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1 [34m304[39m in 285ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 152ms
+ GET /api/analytics/counts?slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1 [34m304[39m in 301ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 267ms
+ GET /api/analytics/counts?slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1 [34m304[39m in 275ms
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [34m304[39m in 230ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 16.8s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 3.4s
+ GET / [32m200[39m in 8015ms
+ [32m[1m✓[22m[39m Compiled /api/links/list in 419ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 1524ms
+ [32m[1m✓[22m[39m Compiled /api/analytics/counts in 158ms
+ GET /api/analytics/counts?slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4&slugs=Nit3ouMym1 [32m200[39m in 195ms
+ [32m[1m✓[22m[39m Compiled /api/links/create in 147ms
+ POST /api/links/create [32m201[39m in 178ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 115ms
+ GET /api/analytics/counts?slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4 [32m200[39m in 118ms
+ GET /api/analytics/counts?slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4 [34m304[39m in 108ms
+ GET /api/analytics/counts?slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4 [34m304[39m in 124ms
+ GET /api/analytics/counts?slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4 [34m304[39m in 110ms
+ GET /api/analytics/counts?slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4 [34m304[39m in 192ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 14.8s
+ [37m[1m○[22m[39m Compiling /[slug] ...
+ [32m[1m✓[22m[39m Compiled /[slug] in 2.3s
+ GET /YUwhCk [34m307[39m in 3544ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 546ms
+ GET / [32m200[39m in 3298ms
+ [32m[1m✓[22m[39m Compiled /api/links/list in 217ms
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 698ms
+ [32m[1m✓[22m[39m Compiled /api/analytics/counts in 152ms
+ GET /api/analytics/counts?slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP&slugs=hnReZ6g4W4 [34m304[39m in 164ms
+ [32m[1m✓[22m[39m Compiled /api/links/create in 170ms
+ POST /api/links/create [32m201[39m in 173ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 108ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [32m200[39m in 147ms
+ [32m[1m✓[22m[39m Compiled /api/links/update in 132ms
+ POST /api/links/update [32m200[39m in 174ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 156ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 107ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 126ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 97ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 100ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 101ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 103ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 105ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 104ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 110ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 124ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 126ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 92ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 322ms
+ POST /api/links/update [32m200[39m in 124ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 116ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 107ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 106ms
+ GET / [32m200[39m in 312ms
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 118ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET /api/analytics/counts?slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5&slugs=JbV4nbfdHW [32m200[39m in 155ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 1871ms
+ GET /favicon.ico [32m200[39m in 2669ms
+ POST /api/links/create [32m201[39m in 135ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 145ms
+ GET /api/analytics/counts?slugs=2D7uDpTsXb&slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5 [32m200[39m in 139ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=asc [32m200[39m in 170ms
+ GET /api/analytics/counts?slugs=sslink&slugs=23pjFOSsRS&slugs=w5mR2yxtJn&slugs=6QzxA7Yjvu&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=TMYDXwKh5B&slugs=_6toYtlZiD&slugs=hBcpn3X4Ov&slugs=SS1zzCtHN2 [32m200[39m in 126ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=desc [32m200[39m in 148ms
+ GET /api/analytics/counts?slugs=sslink&slugs=23pjFOSsRS&slugs=w5mR2yxtJn&slugs=6QzxA7Yjvu&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=TMYDXwKh5B&slugs=_6toYtlZiD&slugs=hBcpn3X4Ov&slugs=SS1zzCtHN2 [34m304[39m in 161ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=asc [34m304[39m in 182ms
+ GET /api/analytics/counts?slugs=sslink&slugs=23pjFOSsRS&slugs=w5mR2yxtJn&slugs=6QzxA7Yjvu&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=TMYDXwKh5B&slugs=_6toYtlZiD&slugs=hBcpn3X4Ov&slugs=SS1zzCtHN2 [34m304[39m in 177ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=desc [34m304[39m in 169ms
+ GET /api/analytics/counts?slugs=sslink&slugs=23pjFOSsRS&slugs=w5mR2yxtJn&slugs=6QzxA7Yjvu&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=TMYDXwKh5B&slugs=_6toYtlZiD&slugs=hBcpn3X4Ov&slugs=SS1zzCtHN2 [34m304[39m in 152ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 181ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=asc [34m304[39m in 182ms
+ GET /api/analytics/counts?slugs=sslink&slugs=23pjFOSsRS&slugs=w5mR2yxtJn&slugs=6QzxA7Yjvu&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=TMYDXwKh5B&slugs=_6toYtlZiD&slugs=hBcpn3X4Ov&slugs=SS1zzCtHN2 [34m304[39m in 142ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=desc [34m304[39m in 198ms
+ GET /api/analytics/counts?slugs=sslink&slugs=23pjFOSsRS&slugs=w5mR2yxtJn&slugs=6QzxA7Yjvu&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=TMYDXwKh5B&slugs=_6toYtlZiD&slugs=hBcpn3X4Ov&slugs=SS1zzCtHN2 [34m304[39m in 145ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=asc [34m304[39m in 153ms
+ GET /api/analytics/counts?slugs=sslink&slugs=23pjFOSsRS&slugs=w5mR2yxtJn&slugs=6QzxA7Yjvu&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=TMYDXwKh5B&slugs=_6toYtlZiD&slugs=hBcpn3X4Ov&slugs=SS1zzCtHN2 [34m304[39m in 144ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=desc [34m304[39m in 149ms
+ GET /api/analytics/counts?slugs=sslink&slugs=23pjFOSsRS&slugs=w5mR2yxtJn&slugs=6QzxA7Yjvu&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=TMYDXwKh5B&slugs=_6toYtlZiD&slugs=hBcpn3X4Ov&slugs=SS1zzCtHN2 [34m304[39m in 197ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=asc [34m304[39m in 187ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=desc [34m304[39m in 120ms
+ GET /api/analytics/counts?slugs=sslink&slugs=23pjFOSsRS&slugs=w5mR2yxtJn&slugs=6QzxA7Yjvu&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=TMYDXwKh5B&slugs=_6toYtlZiD&slugs=hBcpn3X4Ov&slugs=SS1zzCtHN2 [34m304[39m in 138ms
+ GET / [32m200[39m in 337ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 131ms
+ GET /api/analytics/counts?slugs=2D7uDpTsXb&slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5 [34m304[39m in 176ms
+ GET /favicon.ico [32m200[39m in 573ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=asc [34m304[39m in 130ms
+ GET /api/analytics/counts?slugs=sslink&slugs=23pjFOSsRS&slugs=w5mR2yxtJn&slugs=6QzxA7Yjvu&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=TMYDXwKh5B&slugs=_6toYtlZiD&slugs=hBcpn3X4Ov&slugs=SS1zzCtHN2 [34m304[39m in 134ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=desc [34m304[39m in 130ms
+ GET /api/analytics/counts?slugs=sslink&slugs=23pjFOSsRS&slugs=w5mR2yxtJn&slugs=6QzxA7Yjvu&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=TMYDXwKh5B&slugs=_6toYtlZiD&slugs=hBcpn3X4Ov&slugs=SS1zzCtHN2 [34m304[39m in 129ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=clicks&sortDirection=asc [34m304[39m in 125ms
+ GET /api/analytics/counts?slugs=sslink&slugs=23pjFOSsRS&slugs=w5mR2yxtJn&slugs=6QzxA7Yjvu&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=TMYDXwKh5B&slugs=_6toYtlZiD&slugs=hBcpn3X4Ov&slugs=SS1zzCtHN2 [34m304[39m in 181ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=longUrl&sortDirection=asc [32m200[39m in 135ms
+ GET /api/analytics/counts?slugs=sslink&slugs=23pjFOSsRS&slugs=w5mR2yxtJn&slugs=6QzxA7Yjvu&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=TMYDXwKh5B&slugs=_6toYtlZiD&slugs=hBcpn3X4Ov&slugs=SS1zzCtHN2 [34m304[39m in 124ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=longUrl&sortDirection=desc [32m200[39m in 124ms
+ GET /api/analytics/counts?slugs=sslink&slugs=23pjFOSsRS&slugs=w5mR2yxtJn&slugs=6QzxA7Yjvu&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=TMYDXwKh5B&slugs=_6toYtlZiD&slugs=hBcpn3X4Ov&slugs=SS1zzCtHN2 [34m304[39m in 124ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=longUrl&sortDirection=asc [34m304[39m in 127ms
+ GET /api/analytics/counts?slugs=sslink&slugs=23pjFOSsRS&slugs=w5mR2yxtJn&slugs=6QzxA7Yjvu&slugs=h1qYchH1WV&slugs=6WwCLyn1zZ&slugs=TMYDXwKh5B&slugs=_6toYtlZiD&slugs=hBcpn3X4Ov&slugs=SS1zzCtHN2 [34m304[39m in 147ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=slug&sortDirection=asc [32m200[39m in 156ms
+ GET /api/analytics/counts?slugs=_6toYtlZiD&slugs=0FtSn4I8u3&slugs=12345&slugs=23pjFOSsRS&slugs=2D7uDpTsXb&slugs=4_O227Anor&slugs=6QzxA7Yjvu&slugs=6WwCLyn1zZ&slugs=7vreQLwV2i&slugs=9OAJxhbzBf [32m200[39m in 117ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 129ms
+ GET /api/links/list?q=&page=1&perPage=10&sortField=slug&sortDirection=desc [32m200[39m in 154ms
+ GET /api/analytics/counts?slugs=zzolxmImIq&slugs=yjKay2Acxi&slugs=xiyIbvPdE5&slugs=X96vL-1hq-&slugs=WzIV-d_m_J&slugs=w5mR2yxtJn&slugs=Ulw0F3lk8a&slugs=TMYDXwKh5B&slugs=sxxlmEOijZ&slugs=sslink [32m200[39m in 128ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 123ms
+ GET /api/analytics/counts?slugs=zzolxmImIq&slugs=yjKay2Acxi&slugs=xiyIbvPdE5&slugs=X96vL-1hq-&slugs=WzIV-d_m_J&slugs=w5mR2yxtJn&slugs=Ulw0F3lk8a&slugs=TMYDXwKh5B&slugs=sxxlmEOijZ&slugs=sslink [34m304[39m in 121ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 120ms
+ GET /api/analytics/counts?slugs=zzolxmImIq&slugs=yjKay2Acxi&slugs=xiyIbvPdE5&slugs=X96vL-1hq-&slugs=WzIV-d_m_J&slugs=w5mR2yxtJn&slugs=Ulw0F3lk8a&slugs=TMYDXwKh5B&slugs=sxxlmEOijZ&slugs=sslink [34m304[39m in 151ms
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 126ms
+ GET /api/auth/csrf [32m200[39m in 190ms
+ POST /api/auth/signout [32m200[39m in 141ms
+ GET / [34m307[39m in 322ms
+ GET /api/auth/signin [32m200[39m in 126ms
+ GET /favicon.ico [32m200[39m in 446ms
+ POST /api/auth/signin/google [34m302[39m in 178ms
+ GET /api/auth/callback/google?state=UXNFSo0sjbj_cHhM5_MPj3Ov06IUFxT5qsssolE5Q-c&code=4%2F0AVMBsJiO9b43enPh7VpKohqrLBZ3_bmN6Wly9sDyXDQIvbguPqongDkk5axUEo2yxCpPYg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&hd=shalusri.com&prompt=none [34m302[39m in 316ms
+ GET / [32m200[39m in 313ms
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 193ms
+ GET /favicon.ico [32m200[39m in 594ms
+ GET /api/analytics/counts?slugs=2D7uDpTsXb&slugs=OxVAZ1hVDh&slugs=7vreQLwV2i&slugs=CXeEW7U2UF&slugs=F6ECG8y1Jo&slugs=hqZ47vqnZO&slugs=yjKay2Acxi&slugs=12345&slugs=bNQtliYNMU&slugs=r5zOT5jvE5 [34m304[39m in 152ms
+ GET /api/analytics/counts?slugs=rET57pFDYZ&slugs=EcT6Ly9sRD&slugs=GX2bYC_C1Q&slugs=mymylink&slugs=vjbIX3c7bF&slugs=8xoh_WGuQA&slugs=PhNiIs09up&slugs=oIvJiRkS94&slugs=-uLWW98Vcn&slugs=F2r89cvZNP [34m304[39m in 131ms
+ GET /api/analytics/counts?s

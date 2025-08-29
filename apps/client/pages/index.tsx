@@ -25,6 +25,15 @@ export default function Home({ user }: { user: any }) {
   // Toast notifications
   const { toasts, removeToast, showSuccess, showError, showInfo } = useToast();
   
+  // Get highlight duration from environment variable with validation (1-5 seconds, default 1)
+  const getHighlightDuration = () => {
+    const envDuration = process.env.NEXT_PUBLIC_HIGHLIGHT_DURATION;
+    const duration = envDuration ? parseInt(envDuration, 10) : 1;
+    // Validate range: 1-5 seconds, default to 1 if invalid
+    return (duration >= 1 && duration <= 5) ? duration * 1000 : 1000; // Convert to milliseconds
+  };
+  const highlightDuration = getHighlightDuration();
+  
   // State for creation
   const [longUrl, setLongUrl] = useState("");
   const [customSlug, setCustomSlug] = useState("");
@@ -38,14 +47,34 @@ export default function Home({ user }: { user: any }) {
   // State for edit
   const [editSlug, setEditSlug] = useState<string | null>(null);
   const [editUrl, setEditUrl] = useState("");
+  // State for analytics
+  const [clickCounts, setClickCounts] = useState<Record<string, number>>({});
+  // State for sorting
+  const [sortField, setSortField] = useState<'slug' | 'longUrl' | 'clicks' | null>(null);
+  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
+  // State for highlighting newly created and updated links
+  const [highlightedLinkId, setHighlightedLinkId] = useState<string | null>(null);
+  const [updatedLinkId, setUpdatedLinkId] = useState<string | null>(null);
 
   // Fetch paginated/search results
   useEffect(() => {
     let mounted = true;
     setLoading(true);
-    fetch(
-      `/api/links/list?q=${encodeURIComponent(search)}&page=${page}&perPage=${perPage}`
-    )
+    
+    // Build query parameters
+    const params = new URLSearchParams({
+      q: search,
+      page: page.toString(),
+      perPage: perPage.toString(),
+    });
+    
+    // Add sorting parameters if they exist
+    if (sortField && sortDirection) {
+      params.append('sortField', sortField);
+      params.append('sortDirection', sortDirection);
+    }
+    
+    fetch(`/api/links/list?${params.toString()}`)
       .then((res) => res.json())
       .then((data) => {
         if (mounted) {
@@ -58,9 +87,70 @@ export default function Home({ user }: { user: any }) {
     return () => {
       mounted = false;
     };
-  }, [search, page, perPage]);
+  }, [search, page, perPage, sortField, sortDirection]);
+
+  // Fetch analytics for current links
+  useEffect(() => {
+    if (links.length > 0) {
+      const slugs = links.map(link => link.slug);
+      const slugParams = slugs.map(slug => `slugs=${encodeURIComponent(slug)}`).join('&');
+      
+      fetch(`/api/analytics/counts?${slugParams}`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.clickCounts) {
+            setClickCounts(data.clickCounts);
+          }
+        })
+        .catch(() => {
+          // Silently fail, analytics are not critical
+        });
+    }
+  }, [links]);
+
+  // Auto-refresh analytics every 30 seconds
+  useEffect(() => {
+    if (links.length === 0) return;
+
+    const interval = setInterval(() => {
+      const slugs = links.map(link => link.slug);
+      const slugParams = slugs.map(slug => `slugs=${encodeURIComponent(slug)}`).join('&');
+      
+      fetch(`/api/analytics/counts?${slugParams}`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.clickCounts) {
+            setClickCounts(data.clickCounts);
+          }
+        })
+        .catch(() => {
+          // Silently fail
+        });
+    }, 30000); // 30 seconds
+
+    return () => clearInterval(interval);
+  }, [links]);
 
   const totalPages = Math.ceil(total / perPage) || 1;
+
+  // Sorting function
+  function handleSort(field: 'slug' | 'longUrl' | 'clicks') {
+    if (sortField === field) {
+      // Toggle direction if same field
+      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
+    } else {
+      // New field, start with ascending
+      setSortField(field);
+      setSortDirection('asc');
+    }
+  }
+
+
+  // Get sort indicator
+  function getSortIndicator(field: 'slug' | 'longUrl' | 'clicks') {
+    if (sortField !== field) return ' ↕️';
+    return sortDirection === 'asc' ? ' ↑' : ' ↓';
+  }
 
   // Create new link
   async function handleCreate(e: React.FormEvent) {
@@ -74,9 +164,46 @@ export default function Home({ user }: { user: any }) {
     const data = await res.json();
     if (res.ok) {
       showSuccess("Link created successfully!");
-      setLinks([data, ...links]);
       setLongUrl("");
       setCustomSlug("");
+      
+      // Reset to show all links (clear search), default sorting (newest first), and go to page 1
+      setSearch("");
+      setSortField(null);
+      setSortDirection('asc');
+      setPage(1);
+      
+      // Refresh the data with default sorting and no search filter
+      const refreshParams = new URLSearchParams({
+        q: '',
+        page: '1',
+        perPage: perPage.toString(),
+      });
+      
+      fetch(`/api/links/list?${refreshParams.toString()}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setLinks(data.links || []);
+          setTotal(data.total || 0);
+          
+          // Highlight the newly created link (it should be the first one since we reset sorting)
+          if (data.links && data.links.length > 0) {
+            setHighlightedLinkId(data.links[0].internalId);
+            // Clear highlight after configured duration
+            setTimeout(() => {
+              setHighlightedLinkId(null);
+            }, highlightDuration);
+          }
+        })
+        .catch(() => {
+          // If refresh fails, just prepend the new link (fallback)
+          setLinks([data, ...links].slice(0, perPage));
+          // Highlight the newly created link
+          setHighlightedLinkId(data.internalId);
+          setTimeout(() => {
+            setHighlightedLinkId(null);
+          }, highlightDuration);
+        });
     } else {
       showError(data.error || "Failed to create link");
     }
@@ -104,6 +231,13 @@ export default function Home({ user }: { user: any }) {
       );
       setEditSlug(null);
       setEditUrl("");
+      
+      // Highlight the updated link with a different color
+      setUpdatedLinkId(internalId);
+      // Clear highlight after configured duration
+      setTimeout(() => {
+        setUpdatedLinkId(null);
+      }, highlightDuration);
     } else {
       showError(data.error || "Failed to update link");
     }
@@ -120,7 +254,39 @@ export default function Home({ user }: { user: any }) {
     const data = await res.json();
     if (res.ok) {
       showSuccess("Link deleted successfully!");
-      setLinks(links.filter((l) => l.internalId !== internalId));
+      
+      // Calculate if we need to go to previous page
+      const remainingLinksOnCurrentPage = links.length - 1;
+      const shouldGoToPreviousPage = remainingLinksOnCurrentPage === 0 && page > 1;
+      
+      // Update page if necessary
+      if (shouldGoToPreviousPage) {
+        setPage(page - 1);
+      }
+      
+      // Refresh the data to get the correct page content
+      const refreshParams = new URLSearchParams({
+        q: search,
+        page: shouldGoToPreviousPage ? (page - 1).toString() : page.toString(),
+        perPage: perPage.toString(),
+      });
+      
+      // Add sorting parameters if they exist
+      if (sortField && sortDirection) {
+        refreshParams.append('sortField', sortField);
+        refreshParams.append('sortDirection', sortDirection);
+      }
+      
+      fetch(`/api/links/list?${refreshParams.toString()}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setLinks(data.links || []);
+          setTotal(data.total || 0);
+        })
+        .catch(() => {
+          // If refresh fails, just remove the deleted link (fallback)
+          setLinks(links.filter((l) => l.internalId !== internalId));
+        });
     } else {
       showError(data.error || "Failed to delete link");
     }
@@ -139,7 +305,15 @@ export default function Home({ user }: { user: any }) {
 
   // Render
   return (
-    <main style={{ maxWidth: 850, margin: "auto", padding: 30 }}>
+    <>
+      <style jsx>{`
+        @keyframes pulse {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.02); }
+          100% { transform: scale(1); }
+        }
+      `}</style>
+      <main style={{ maxWidth: 850, margin: "auto", padding: 30 }}>
       {/* User Profile Header */}
       <div style={{ 
         display: 'flex', 
@@ -174,7 +348,7 @@ export default function Home({ user }: { user: any }) {
         </div>
         <div>
           <button
-            onClick={() => signOut({ callbackUrl: '/api/auth/signin' })}
+            onClick={() => signOut()}
             style={{
               padding: '8px 16px',
               background: '#dc3545',
@@ -262,21 +436,73 @@ export default function Home({ user }: { user: any }) {
       >
         <thead>
           <tr style={{ background: "#eef", fontWeight: 600 }}>
-            <th style={{ padding: "8px 2px" }}>Slug</th>
-            <th style={{ padding: "8px 2px" }}>Destination URL</th>
-            <th style={{ padding: "8px 2px" }}>Actions</th>
+            <th 
+              style={{ 
+                padding: "8px 2px", 
+                cursor: "pointer", 
+                userSelect: "none",
+                borderBottom: "2px solid #ddd"
+              }}
+              onClick={() => handleSort('slug')}
+              title="Click to sort by Slug"
+            >
+              Slug{getSortIndicator('slug')}
+            </th>
+            <th 
+              style={{ 
+                padding: "8px 2px", 
+                cursor: "pointer", 
+                userSelect: "none",
+                borderBottom: "2px solid #ddd"
+              }}
+              onClick={() => handleSort('longUrl')}
+              title="Click to sort by Destination URL"
+            >
+              Destination URL{getSortIndicator('longUrl')}
+            </th>
+            <th 
+              style={{ 
+                padding: "8px 2px", 
+                cursor: "pointer", 
+                userSelect: "none",
+                borderBottom: "2px solid #ddd"
+              }}
+              onClick={() => handleSort('clicks')}
+              title="Click to sort by Click Count"
+            >
+              Analytics{getSortIndicator('clicks')}
+            </th>
+            <th style={{ padding: "8px 2px", borderBottom: "2px solid #ddd" }}>Actions</th>
           </tr>
         </thead>
         <tbody>
           {links.length === 0 ? (
             <tr>
-              <td colSpan={3} style={{ textAlign: "center" }}>
+              <td colSpan={4} style={{ textAlign: "center" }}>
                 No links found.
               </td>
             </tr>
           ) : (
             links.map((link) => (
-              <tr key={link.internalId}>
+              <tr 
+                key={link.internalId}
+                style={{
+                  backgroundColor: highlightedLinkId === link.internalId 
+                    ? '#d4edda' // Green for newly created
+                    : updatedLinkId === link.internalId 
+                    ? '#fff3cd' // Yellow for updated
+                    : 'transparent',
+                  border: highlightedLinkId === link.internalId 
+                    ? '2px solid #28a745' // Green border for newly created
+                    : updatedLinkId === link.internalId 
+                    ? '2px solid #ffc107' // Yellow border for updated
+                    : 'none',
+                  transition: 'all 0.3s ease-in-out',
+                  animation: (highlightedLinkId === link.internalId || updatedLinkId === link.internalId) 
+                    ? 'pulse 0.5s ease-in-out' 
+                    : 'none'
+                }}
+              >
                 <td>
                   <div style={{ fontWeight: 600 }}>{link.slug}</div>
                   <button
@@ -306,6 +532,11 @@ export default function Home({ user }: { user: any }) {
                   ) : (
                     link.longUrl
                   )}
+                </td>
+                <td style={{ textAlign: "center", color: "#666" }}>
+                  <span style={{ fontSize: "0.9em" }}>
+                    Clicks: <strong>{clickCounts[link.slug] || 0}</strong>
+                  </span>
                 </td>
                 <td>
                   {editSlug === link.slug ? (
@@ -366,6 +597,7 @@ export default function Home({ user }: { user: any }) {
       {/* Toast Container */}
       <ToastContainer toasts={toasts} onRemove={removeToast} />
     </main>
+    </>
   );
 }
 // This is the main dashboard page for authenticated users to create, view, edit, and delete their short links.
