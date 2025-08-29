@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { GetServerSideProps } from "next";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "./api/auth/[...nextauth]";
+import { signOut } from "next-auth/react";
+import { ToastContainer, useToast } from "../components/Toast";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const session = await getServerSession(context.req, context.res, authOptions);
@@ -20,6 +22,9 @@ type LinkEntry = {
 };
 
 export default function Home({ user }: { user: any }) {
+  // Toast notifications
+  const { toasts, removeToast, showSuccess, showError, showInfo } = useToast();
+  
   // State for creation
   const [longUrl, setLongUrl] = useState("");
   const [customSlug, setCustomSlug] = useState("");
@@ -30,7 +35,6 @@ export default function Home({ user }: { user: any }) {
   const [page, setPage] = useState(1);
   const [perPage, setPerPage] = useState(10);
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState("");
   // State for edit
   const [editSlug, setEditSlug] = useState<string | null>(null);
   const [editUrl, setEditUrl] = useState("");
@@ -61,7 +65,7 @@ export default function Home({ user }: { user: any }) {
   // Create new link
   async function handleCreate(e: React.FormEvent) {
     e.preventDefault();
-    setStatus("Creating...");
+    showInfo("Creating link...");
     const res = await fetch("/api/links/create", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -69,12 +73,12 @@ export default function Home({ user }: { user: any }) {
     });
     const data = await res.json();
     if (res.ok) {
-      setStatus("Link created!");
+      showSuccess("Link created successfully!");
       setLinks([data, ...links]);
       setLongUrl("");
       setCustomSlug("");
     } else {
-      setStatus(data.error || "Failed to create link");
+      showError(data.error || "Failed to create link");
     }
   }
 
@@ -84,7 +88,7 @@ export default function Home({ user }: { user: any }) {
     setEditUrl(link.longUrl);
   }
   async function saveEdit(internalId: string) {
-    setStatus("Updating...");
+    showInfo("Updating link...");
     const res = await fetch("/api/links/update", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -92,7 +96,7 @@ export default function Home({ user }: { user: any }) {
     });
     const data = await res.json();
     if (res.ok) {
-      setStatus("Updated!");
+      showSuccess("Link updated successfully!");
       setLinks(
         links.map((l) =>
           l.internalId === internalId ? { ...l, longUrl: editUrl } : l
@@ -101,13 +105,13 @@ export default function Home({ user }: { user: any }) {
       setEditSlug(null);
       setEditUrl("");
     } else {
-      setStatus(data.error || "Failed to update");
+      showError(data.error || "Failed to update link");
     }
   }
   // Delete logic
   async function handleDelete(internalId: string) {
     if (!window.confirm("Delete this link?")) return;
-    setStatus("Deleting...");
+    showInfo("Deleting link...");
     const res = await fetch("/api/links/delete", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -115,10 +119,10 @@ export default function Home({ user }: { user: any }) {
     });
     const data = await res.json();
     if (res.ok) {
-      setStatus("Deleted!");
+      showSuccess("Link deleted successfully!");
       setLinks(links.filter((l) => l.internalId !== internalId));
     } else {
-      setStatus(data.error || "Failed to delete");
+      showError(data.error || "Failed to delete link");
     }
   }
   // Copy to clipboard
@@ -129,14 +133,64 @@ export default function Home({ user }: { user: any }) {
         : process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
     navigator.clipboard
       .writeText(`${baseUrl}/${slug}`)
-      .then(() => setStatus("Copied!"))
-      .catch(() => setStatus("Copy failed!"));
+      .then(() => showSuccess("Link copied to clipboard!"))
+      .catch(() => showError("Failed to copy link"));
   }
 
   // Render
   return (
     <main style={{ maxWidth: 850, margin: "auto", padding: 30 }}>
-      <h2>Welcome, {user?.name || user?.email || user?.id}!</h2>
+      {/* User Profile Header */}
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        alignItems: 'center',
+        marginBottom: 20,
+        padding: 15,
+        background: '#f8f9fa',
+        borderRadius: 8,
+        border: '1px solid #e9ecef'
+      }}>
+        <div>
+          <h2 style={{ margin: 0, marginBottom: 5 }}>
+            Welcome, {user?.name || user?.email}!
+          </h2>
+          <div style={{ fontSize: '0.9em', color: '#666' }}>
+            {user?.email && <span>Email: {user.email}</span>}
+            {user?.image && (
+              <img 
+                src={user.image} 
+                alt="Profile" 
+                style={{ 
+                  width: 32, 
+                  height: 32, 
+                  borderRadius: '50%', 
+                  marginLeft: 10,
+                  verticalAlign: 'middle'
+                }} 
+              />
+            )}
+          </div>
+        </div>
+        <div>
+          <button
+            onClick={() => signOut({ callbackUrl: '/api/auth/signin' })}
+            style={{
+              padding: '8px 16px',
+              background: '#dc3545',
+              color: 'white',
+              border: 'none',
+              borderRadius: 4,
+              cursor: 'pointer',
+              fontSize: '0.9em'
+            }}
+            onMouseOver={(e) => e.currentTarget.style.background = '#c82333'}
+            onMouseOut={(e) => e.currentTarget.style.background = '#dc3545'}
+          >
+            Sign Out
+          </button>
+        </div>
+      </div>
 
       {/* Create new link */}
       <form onSubmit={handleCreate} style={{ margin: "18px 0 8px 0" }}>
@@ -196,9 +250,6 @@ export default function Home({ user }: { user: any }) {
             </option>
           ))}
         </select>
-        {status && (
-          <span style={{ marginLeft: 12, color: "#098" }}>{status}</span>
-        )}
       </div>
       {/* Table */}
       <table
@@ -311,6 +362,9 @@ export default function Home({ user }: { user: any }) {
         </button>
       </div>
       {loading && <div>Loading...</div>}
+      
+      {/* Toast Container */}
+      <ToastContainer toasts={toasts} onRemove={removeToast} />
     </main>
   );
 }

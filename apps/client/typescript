@@ -648,4 +648,100 @@ BODY { internalId: [32m'wakwUi7y17Gg'[39m }
 [?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
 [?2004l
 > client@0.1.0 dev
-> ne
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 14.7s
+ [37m[1m○[22m[39m Compiling / ...
+ GET / [32m200[39m in 7026ms
+ [32m[1m✓[22m[39m Compiled / in 7.1s
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 2088ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 2.9s
+ GET /favicon.ico [32m200[39m in 3792ms
+ [32m[1m✓[22m[39m Compiled /api/links/create in 155ms
+ POST /api/links/create [32m201[39m in 178ms
+ POST /api/links/create [32m201[39m in 116ms
+ POST /api/links/create [32m201[39m in 121ms
+ [32m[1m✓[22m[39m Compiled /api/links/update in 168ms
+BODY {
+  internalId: [32m'S0uG-7rQVnHe'[39m,
+  longUrl: [32m'https://docs.google.com/spreadsheets/d/1UAAOQvLQfLBuYKOL0HsZ7dYy4aTQ8UGs/edit?usp=drive_link&ouid=117947049907504187636&rtpof=true&6543'[39m
+}
+ POST /api/links/update [32m200[39m in 181ms
+BODY {
+  internalId: [32m'KKsnSikWLPU2'[39m,
+  longUrl: [32m'https://docs.google.com/spreadsheets/d/1UAAOQvLQfLBuYKOL0HsZ7dYy4aTQ8UGs/edit?usp=drive_link&ouid=117947049907504187636&rtpof=true&23443'[39m
+}
+ POST /api/links/update [32m200[39m in 153ms
+BODY {
+  internalId: [32m'GrWwJRBjWpQr'[39m,
+  longUrl: [32m'1234https://docs.google.com/spreadsheets/d/1UAAOQvLQfLBuYKOL0HsZ7dYy4aTQ8UGs/edit?usp=drive_link&ouid=117947049907504187636&rtpof=true'[39m
+}
+ POST /api/links/update [33m400[39m in 134ms
+BODY {
+  internalId: [32m'GrWwJRBjWpQr'[39m,
+  longUrl: [32m'https://docs.google.com/spreadsheets/d/1UAAOQvLQfLBuYKOL0HsZ7dYy4aTQ8UGs/edit?usp=drive_link&ouid=117947049907504187636&rtpof=true/false'[39m
+}
+ POST /api/links/update [32m200[39m in 128ms
+ [32m[1m✓[22m[39m Compiled /api/links/delete in 137ms
+BODY { internalId: [32m'GrWwJRBjWpQr'[39m }
+ POST /api/links/delete [32m200[39m in 189ms
+BODY { internalId: [32m'S0uG-7rQVnHe'[39m }
+ POST /api/links/delete [32m200[39m in 133ms
+BODY { internalId: [32m'KKsnSikWLPU2'[39m }
+ POST /api/links/delete [32m200[39m in 136ms
+ GET /api/links/list?q=&page=2&perPage=10 [34m304[39m in 134ms
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 129ms
+ [32m[1m✓[22m[39m Compiled /[slug] in 264ms
+ [37m[1m○[22m[39m Compiling /_not-found/page ...
+ [32m[1m✓[22m[39m Compiled /_not-found/page in 4s
+ GET /ZumyN- [33m404[39m in 5143ms
+ POST /api/links/create [32m201[39m in 145ms
+ GET /CEigd75GUD [33m404[39m in 602ms
+exit
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 9.1s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.3s
+ GET / [32m200[39m in 6542ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 2.3s
+ GET /favicon.ico [32m200[39m in 3314ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 11.7s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.9s
+ GET / [32m200[39m in 6904ms
+ GET / [32m200[39m in 613ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET 

@@ -22,7 +22,7 @@ apps/*/out/
 .env
 .env.*
 !.env.example
-.info
+
 
 # Mac/Linux/Windows system files
 .DS_Store
@@ -47,3 +47,8 @@ packages/*/build/
 # Redis data if generated
 redis_data/
 apps/*/redis_data/
+
+# Custom
+.info
+ImplementationPlan.md
+TaskList.md

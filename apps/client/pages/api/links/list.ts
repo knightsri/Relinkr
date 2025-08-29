@@ -2,6 +2,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { redis } from '../../../lib/redis';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '../auth/[...nextauth]';
+import { listLinksSchema } from '../../../lib/validation';
+import { ZodError } from 'zod';
 
 type LinkEntry = {
   slug: string;
@@ -14,10 +16,31 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const session = await getServerSession(req, res, authOptions);
   if (!session) return res.status(401).json({ error: 'Unauthorized' });
 
-  const userId = session.user?.email || session.user?.id || 'unknown';
-  const q = (req.query.q as string | undefined)?.toLowerCase();
-  const page = parseInt((req.query.page as string) || '1', 10);
-  const perPage = parseInt((req.query.perPage as string) || '10', 10);
+  const userId = session.user?.email || 'unknown';
+
+  // Validate query parameters using Zod
+  let validatedQuery;
+  try {
+    validatedQuery = listLinksSchema.parse({
+      search: req.query.q,
+      page: req.query.page,
+      limit: req.query.perPage,
+    });
+  } catch (error) {
+    if (error instanceof ZodError) {
+      return res.status(400).json({ 
+        error: 'Invalid query parameters', 
+        details: error.issues.map((issue) => ({
+          field: issue.path.join('.'),
+          message: issue.message
+        }))
+      });
+    }
+    return res.status(500).json({ error: 'Internal server error' });
+  }
+
+  const { search: q, page, limit: perPage } = validatedQuery;
+  const searchTerm = q?.toLowerCase();
 
   const slugs = await redis.smembers(`user:${userId}:links`);
   if (!slugs.length) return res.status(200).json({ links: [], total: 0 });
@@ -28,14 +51,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const results = await pipeline.exec();
 
   let links: LinkEntry[] = [];
-  results.forEach(([err, json], i) => {
-    if (!err && json) {
-      const info = JSON.parse(json);
-      if (!q || slugs[i].includes(q) || info.longUrl?.toLowerCase()?.includes(q)) {
-        links.push({ slug: slugs[i], ...info });
+  if (results) {
+    results.forEach(([err, json], i) => {
+      if (!err && json && typeof json === 'string') {
+        const info = JSON.parse(json);
+        if (!searchTerm || slugs[i].includes(searchTerm) || info.longUrl?.toLowerCase()?.includes(searchTerm)) {
+          links.push({ slug: slugs[i], ...info });
+        }
       }
-    }
-  });
+    });
+  }
 
   // Sort (optional: newest on top by slug or time, if you store it)
   links = links.sort((a, b) => b.slug.localeCompare(a.slug)); // replace as desired

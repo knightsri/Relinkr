@@ -3,6 +3,8 @@ import { redis } from '../../../lib/redis';
 import { nanoid } from 'nanoid';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '../auth/[...nextauth]';
+import { createLinkSchema } from '../../../lib/validation';
+import { ZodError } from 'zod';
 
 // Slug length config from env
 const SLUG_LENGTH = (() => {
@@ -18,26 +20,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const session = await getServerSession(req, res, authOptions);
   if (!session) return res.status(401).json({ error: 'Unauthorized' });
 
-  const { longUrl, customSlug } = req.body;
-
-  if (!longUrl || typeof longUrl !== 'string' || !longUrl.startsWith('https://')) {
-    return res.status(400).json({ error: 'Invalid long URL. Must start with https://' });
+  // Validate input using Zod
+  let validatedData;
+  try {
+    validatedData = createLinkSchema.parse(req.body);
+  } catch (error) {
+    if (error instanceof ZodError) {
+      return res.status(400).json({ 
+        error: 'Validation failed', 
+        details: error.issues.map((issue) => ({
+          field: issue.path.join('.'),
+          message: issue.message
+        }))
+      });
+    }
+    return res.status(500).json({ error: 'Internal server error' });
   }
+
+  const { longUrl, customSlug } = validatedData;
 
   // Handle customSlug or auto-generated
   let slug;
   if (customSlug) {
-    if (typeof customSlug !== 'string') {
-      return res.status(400).json({ error: 'Invalid custom slug' });
-    }
-    if (
-      customSlug.length < 4 ||
-      customSlug.length > 25
-    ) {
-      return res.status(400).json({
-        error: `Custom slug must be 4 - 25 chars`
-      });
-    }
     slug = customSlug.toLowerCase();
   } else {
     slug = nanoid(SLUG_LENGTH);
