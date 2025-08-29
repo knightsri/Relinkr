@@ -1,0 +1,46 @@
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "./api/auth/[...nextauth]";
+import { GetServerSideProps } from "next";
+import Link from "next/link";
+
+type LinkEntry = {
+  slug: string;
+  longUrl: string;
+  internalId: string;
+  ownerId: string;
+};
+
+// Server-side: fetch user links for SSR (optional: filter by search)
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const session = await getServerSession(context.req, context.res, authOptions);
+  if (!session) {
+    return {
+      redirect: { destination: "/api/auth/signin", permanent: false },
+    };
+  }
+  // Fetch user's links
+  // We'll fill this in shortly with a Redis query!
+  const links: LinkEntry[] = [];
+  return { props: { links, user: session.user } };
+};
+
+export default function Dashboard({ links, user }: { links: LinkEntry[]; user: any }) {
+  // Client state for add/search/edit/delete will go here
+  return (
+    <div>
+      <h2>Welcome, {user?.name || user?.email || user?.id}</h2>
+      <h3>Your Short Links</h3>
+      {/* Search Form here */}
+      {/* Create New Link Form here */}
+      {/* CRUD Table here */}
+      <ul>
+        {links.map((link) => (
+          <li key={link.slug}>
+            <strong>{link.slug}</strong>: {link.longUrl}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+// Note: The above code is a starting point. You will need to implement the Redis queries in getServerSideProps

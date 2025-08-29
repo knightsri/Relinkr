@@ -22,6 +22,7 @@ apps/*/out/
 .env
 .env.*
 !.env.example
+.info
 
 # Mac/Linux/Windows system files
 .DS_Store

@@ -1,0 +1,651 @@
+Script started on 2025-08-29 12:38:32-05:00 [TERM="screen.xterm-256color" TTY="/dev/pts/11" COLUMNS="120" LINES="30"]
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ exit../pdf2text.sh .ls -l[Kcd /mnt/c/Users/srini/Downloads/Session12ls -l[K../pdf2text.sh .exit[K[Knpm d[Krun dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 12.6s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.4s
+[next-auth][warn][NO_SECRET] 
+https://next-auth.js.org/warnings#no_secret
+ GET / [34m307[39m in 5710ms
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 154ms
+ GET /api/auth/signin [32m200[39m in 235ms
+ POST /api/auth/signin/github [34m302[39m in 127ms
+ GET /api/auth/callback/github?code=7f2c22999947d0e8fb79&state=5gOkjuLG8D59zJCcWqYNNjw2cAZTjXF791jgebIRhB4 [34m302[39m in 881ms
+[next-auth][error][JWT_SESSION_ERROR] 
+https://next-auth.js.org/errors#jwt_session_error decryption operation failed {
+  message: [32m'decryption operation failed'[39m,
+  stack: [32m'JWEDecryptionFailed: decryption operation failed\n'[39m +
+    [32m'    at gcmDecrypt (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/jose/dist/node/cjs/runtime/decrypt.js:67:15)\n'[39m +
+    [32m'    at decrypt (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/jose/dist/node/cjs/runtime/decrypt.js:92:20)\n'[39m +
+    [32m'    at flattenedDecrypt (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/jose/dist/node/cjs/jwe/flattened/decrypt.js:143:52)\n'[39m +
+    [32m'    at async compactDecrypt (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/jose/dist/node/cjs/jwe/compact/decrypt.js:18:23)\n'[39m +
+    [32m'    at async jwtDecrypt (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/jose/dist/node/cjs/jwt/decrypt.js:8:23)\n'[39m +
+    [32m'    at async Object.decode (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next-auth/jwt/index.js:56:7)\n'[39m +
+    [32m'    at async Object.session (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next-auth/core/routes/session.js:39:28)\n'[39m +
+    [32m'    at async AuthHandler (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next-auth/core/index.js:136:27)\n'[39m +
+    [32m'    at async getServerSession (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next-auth/next/index.js:129:19)\n'[39m +
+    [32m'    at async getServerSideProps (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/.next/server/chunks/ssr/[root-of-the-server]__76f8c431._.js:106:21)\n'[39m +
+    [32m'    at async renderToHTMLImpl (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next/dist/compiled/next-server/pages-turbo.runtime.dev.js:20:269)\n'[39m +
+    [32m'    at async doRender (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/.next/server/chunks/ssr/node_modules_next_dist_b3cd1bd7._.js:4604:36)\n'[39m +
+    [32m'    at async PagesRouteModule.handleResponse (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next/dist/compiled/next-server/pages-turbo.runtime.dev.js:1:160864)\n'[39m +
+    [32m'    at async handleResponse (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/.next/server/chunks/ssr/node_modules_next_dist_b3cd1bd7._.js:4816:32)\n'[39m +
+    [32m'    at async handler (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/.next/server/chunks/ssr/node_modules_next_dist_b3cd1bd7._.js:4979:17)\n'[39m +
+    [32m'    at async DevServer.renderToResponseWithComponentsImpl (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next/dist/server/base-server.js:1422:9)\n'[39m +
+    [32m'    at async DevServer.renderPageComponent (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next/dist/server/base-server.js:1474:24)\n'[39m +
+    [32m'    at async DevServer.renderToResponseImpl (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next/dist/server/base-server.js:1514:32)\n'[39m +
+    [32m'    at async DevServer.pipeImpl (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next/dist/server/base-server.js:1025:25)\n'[39m +
+    [32m'    at async NextNodeServer.handleCatchallRenderRequest (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next/dist/server/next-server.js:393:17)\n'[39m +
+    [32m'    at async DevServer.handleRequestImpl (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next/dist/server/base-server.js:916:17)\n'[39m +
+    [32m'    at async /mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n'[39m +
+    [32m'    at async Span.traceAsyncFn (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next/dist/trace/trace.js:157:20)\n'[39m +
+    [32m'    at async DevServer.handleRequest (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n'[39m +
+    [32m'    at async invokeRender (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next/dist/server/lib/router-server.js:240:21)\n'[39m +
+    [32m'    at async handleRequest (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next/dist/server/lib/router-server.js:437:24)\n'[39m +
+    [32m'    at async requestHandlerImpl (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next/dist/server/lib/router-server.js:485:13)\n'[39m +
+    [32m'    at async Server.requestListener (/mnt/c/Work/ShalusriInc/Relinkr/apps/client/node_modules/next/dist/server/lib/start-server.js:226:13)'[39m,
+  name: [32m'JWEDecryptionFailed'[39m
+}
+ GET / [34m307[39m in 254ms
+ GET /api/auth/signin [32m200[39m in 96ms
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 13.6s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.4s
+ GET / [34m307[39m in 6038ms
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 197ms
+ GET /api/auth/signin [32m200[39m in 234ms
+ POST /api/auth/signin/github [34m302[39m in 105ms
+ GET /api/auth/callback/github?code=5b6dfd9086463fc3838b&state=Qler5uT-6osMHhYhDdFQIVvTB5fLTXwqPfAsYU4FQcg [34m302[39m in 940ms
+ GET / [32m200[39m in 363ms
+ [32m[1m✓[22m[39m Compiled /api/links/create in 178ms
+ POST /api/links/create [32m201[39m in 288ms
+ POST /api/links/create [32m201[39m in 108ms
+ POST /api/links/create [32m201[39m in 116ms
+ POST /api/links/create [32m201[39m in 135ms
+ POST /api/links/create [32m201[39m in 104ms
+ POST /api/links/create [32m201[39m in 110ms
+ POST /api/links/create [32m201[39m in 104ms
+ POST /api/links/create [32m201[39m in 107ms
+ POST /api/links/create [32m201[39m in 106ms
+ POST /api/links/create [32m201[39m in 113ms
+ POST /api/links/create [32m201[39m in 104ms
+ POST /api/links/create [32m201[39m in 108ms
+ POST /api/links/create [32m201[39m in 107ms
+ POST /api/links/create [32m201[39m in 121ms
+ POST /api/links/create [32m201[39m in 104ms
+ POST /api/links/create [32m201[39m in 105ms
+ POST /api/links/create [32m201[39m in 130ms
+ POST /api/links/create [32m201[39m in 113ms
+ POST /api/links/create [32m201[39m in 112ms
+ POST /api/links/create [32m201[39m in 106ms
+ POST /api/links/create [32m201[39m in 116ms
+ POST /api/links/create [32m201[39m in 113ms
+ POST /api/links/create [32m201[39m in 112ms
+ POST /api/links/create [32m201[39m in 117ms
+ POST /api/links/create [32m201[39m in 113ms
+ POST /api/links/create [32m201[39m in 105ms
+ POST /api/links/create [32m201[39m in 100ms
+ POST /api/links/create [32m201[39m in 114ms
+ POST /api/links/create [32m201[39m in 107ms
+ POST /api/links/create [32m201[39m in 119ms
+ POST /api/links/create [32m201[39m in 101ms
+ POST /api/links/create [32m201[39m in 111ms
+ POST /api/links/create [32m201[39m in 109ms
+ POST /api/links/create [32m201[39m in 111ms
+ POST /api/links/create [32m201[39m in 108ms
+ POST /api/links/create [32m201[39m in 103ms
+ POST /api/links/create [32m201[39m in 129ms
+ POST /api/links/create [32m201[39m in 127ms
+ POST /api/links/create [32m201[39m in 103ms
+ POST /api/links/create [32m201[39m in 107ms
+ POST /api/links/create [32m201[39m in 141ms
+ POST /api/links/create [32m201[39m in 138ms
+ POST /api/links/create [32m201[39m in 126ms
+ POST /api/links/create [32m201[39m in 129ms
+ POST /api/links/create [32m201[39m in 142ms
+ POST /api/links/create [32m201[39m in 134ms
+ POST /api/links/create [32m201[39m in 104ms
+ POST /api/links/create [32m201[39m in 114ms
+ POST /api/links/create [32m201[39m in 137ms
+ POST /api/links/create [32m201[39m in 97ms
+ POST /api/links/create [32m201[39m in 111ms
+ POST /api/links/create [32m201[39m in 101ms
+ POST /api/links/create [32m201[39m in 111ms
+ POST /api/links/create [32m201[39m in 105ms
+ POST /api/links/create [32m201[39m in 113ms
+ POST /api/links/create [32m201[39m in 121ms
+ POST /api/links/create [32m201[39m in 111ms
+ POST /api/links/create [32m201[39m in 111ms
+ POST /api/links/create [32m201[39m in 109ms
+ POST /api/links/create [32m201[39m in 100ms
+ POST /api/links/create [32m201[39m in 131ms
+ [32m[1m✓[22m[39m Compiled /api/links/delete in 135ms
+ POST /api/links/delete [32m200[39m in 135ms
+ POST /api/links/delete [33m404[39m in 117ms
+ POST /api/links/delete [33m404[39m in 113ms
+ GET / [32m200[39m in 308ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 1610ms
+ GET /favicon.ico [32m200[39m in 2415ms
+ POST /api/links/delete [33m404[39m in 132ms
+ POST /api/links/delete [33m404[39m in 134ms
+ [37m[1m○[22m[39m Compiling /_not-found/page ...
+ [32m[1m✓[22m[39m Compiled /_not-found/page in 3.9s
+ GET /my3rdlink [33m404[39m in 4514ms
+ POST /api/links/delete [32m200[39m in 135ms
+ POST /api/links/delete [33m404[39m in 125ms
+ [32m[1m✓[22m[39m Compiled /api/links/update in 134ms
+ POST /api/links/update [33m404[39m in 148ms
+ POST /api/links/update [33m404[39m in 119ms
+ POST /api/links/update [33m404[39m in 120ms
+ POST /api/links/update [32m200[39m in 128ms
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ GET / [32m200[39m in 676ms
+ GET /favicon.ico [32m200[39m in 679ms
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+ [37m[1m [22m[39m Reload env: .env.local
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 13.3s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.6s
+ GET / [32m200[39m in 6590ms
+ GET / [32m200[39m in 528ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 1973ms
+ GET /favicon.ico [32m200[39m in 2934ms
+ GET /favicon.ico [32m200[39m in 593ms
+ [37m[1m○[22m[39m Compiling /_not-found/page ...
+ [32m[1m✓[22m[39m Compiled /_not-found/page in 3.7s
+ GET /my1stlink [33m404[39m in 4359ms
+ GET /my2ndlink [33m404[39m in 319ms
+ GET /pgeQsU [33m404[39m in 402ms
+ [32m[1m✓[22m[39m Compiled /api/links/create in 190ms
+ POST /api/links/create [32m201[39m in 309ms
+ POST /api/links/create [32m201[39m in 117ms
+ POST /api/links/create [32m201[39m in 142ms
+ POST /api/links/create [32m201[39m in 121ms
+ POST /api/links/create [32m201[39m in 155ms
+ POST /api/links/create [32m201[39m in 124ms
+ GET /mylink [33m404[39m in 307ms
+ [32m[1m✓[22m[39m Compiled /api/links/delete in 190ms
+ POST /api/links/delete [33m400[39m in 152ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 13.4s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 3.1s
+ReferenceError: SLUG_LENGTH is not defined
+    at Home (pages/index.tsx:251:85)
+[0m [90m 249 |[39m       [33m<[39m[33mdiv[39m style[33m=[39m{{ marginTop[33m:[39m [35m24[39m[33m,[39m fontSize[33m:[39m [32m"0.95em"[39m[33m,[39m color[33m:[39m [32m"#444"[39m }}[33m>[39m
+ [90m 250 |[39m         [33m<[39m[33mem[39m[33m>[39m
+[31m[1m>[22m[39m[90m 251 |[39m           [33m*[39m [33mSlug[39m length is configurable ([35m4[39m [33m-[39m [35m25[39m characters[33m,[39m [36mwith[39m currently [36mset[39m at[33m:[39m {[33mSLUG_LENGTH[39m} characters  via [33m<[39m[33mcode[39m[33m>[39m[33m.[39menv[33m.[39mlocal[33m<[39m[35m/code>).<br /[39m[33m>[39m
+ [90m     |[39m                                                                                     [31m[1m^[22m[39m
+ [90m 252 |[39m           [33m*[39m [33mFor[39m copy shortcut[33m:[39m [33mClick[39m [32m"Copy link"[39m below any slug to copy full shortlink[33m.[39m
+ [90m 253 |[39m         [33m<[39m[33m/[39m[33mem[39m[33m>[39m
+ [90m 254 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+ [31m[1m⨯[22m[39m ReferenceError: SLUG_LENGTH is not defined
+    at Home (pages/index.tsx:251:85)
+[0m [90m 249 |[39m       [33m<[39m[33mdiv[39m style[33m=[39m{{ marginTop[33m:[39m [35m24[39m[33m,[39m fontSize[33m:[39m [32m"0.95em"[39m[33m,[39m color[33m:[39m [32m"#444"[39m }}[33m>[39m
+ [90m 250 |[39m         [33m<[39m[33mem[39m[33m>[39m
+[31m[1m>[22m[39m[90m 251 |[39m           [33m*[39m [33mSlug[39m length is configurable ([35m4[39m [33m-[39m [35m25[39m characters[33m,[39m [36mwith[39m currently [36mset[39m at[33m:[39m {[33mSLUG_LENGTH[39m} characters  via [33m<[39m[33mcode[39m[33m>[39m[33m.[39menv[33m.[39mlocal[33m<[39m[35m/code>).<br /[39m[33m>[39m
+ [90m     |[39m                                                                                     [31m[1m^[22m[39m
+ [90m 252 |[39m           [33m*[39m [33mFor[39m copy shortcut[33m:[39m [33mClick[39m [32m"Copy link"[39m below any slug to copy full shortlink[33m.[39m
+ [90m 253 |[39m         [33m<[39m[33m/[39m[33mem[39m[33m>[39m
+ [90m 254 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+ [31m[1m⨯[22m[39m ReferenceError: SLUG_LENGTH is not defined
+    at Home (pages/index.tsx:251:85)
+[0m [90m 249 |[39m       [33m<[39m[33mdiv[39m style[33m=[39m{{ marginTop[33m:[39m [35m24[39m[33m,[39m fontSize[33m:[39m [32m"0.95em"[39m[33m,[39m color[33m:[39m [32m"#444"[39m }}[33m>[39m
+ [90m 250 |[39m         [33m<[39m[33mem[39m[33m>[39m
+[31m[1m>[22m[39m[90m 251 |[39m           [33m*[39m [33mSlug[39m length is configurable ([35m4[39m [33m-[39m [35m25[39m characters[33m,[39m [36mwith[39m currently [36mset[39m at[33m:[39m {[33mSLUG_LENGTH[39m} characters  via [33m<[39m[33mcode[39m[33m>[39m[33m.[39menv[33m.[39mlocal[33m<[39m[35m/code>).<br /[39m[33m>[39m
+ [90m     |[39m                                                                                     [31m[1m^[22m[39m
+ [90m 252 |[39m           [33m*[39m [33mFor[39m copy shortcut[33m:[39m [33mClick[39m [32m"Copy link"[39m below any slug to copy full shortlink[33m.[39m
+ [90m 253 |[39m         [33m<[39m[33m/[39m[33mem[39m[33m>[39m
+ [90m 254 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m {
+  page: [32m'/'[39m
+}
+ [32m[1m✓[22m[39m Compiled /_error in 419ms
+ GET / [31m500[39m in 9877ms
+ReferenceError: SLUG_LENGTH is not defined
+    at Home (pages/index.tsx:251:85)
+[0m [90m 249 |[39m       [33m<[39m[33mdiv[39m style[33m=[39m{{ marginTop[33m:[39m [35m24[39m[33m,[39m fontSize[33m:[39m [32m"0.95em"[39m[33m,[39m color[33m:[39m [32m"#444"[39m }}[33m>[39m
+ [90m 250 |[39m         [33m<[39m[33mem[39m[33m>[39m
+[31m[1m>[22m[39m[90m 251 |[39m           [33m*[39m [33mSlug[39m length is configurable ([35m4[39m [33m-[39m [35m25[39m characters[33m,[39m [36mwith[39m currently [36mset[39m at[33m:[39m {[33mSLUG_LENGTH[39m} characters  via [33m<[39m[33mcode[39m[33m>[39m[33m.[39menv[33m.[39mlocal[33m<[39m[35m/code>).<br /[39m[33m>[39m
+ [90m     |[39m                                                                                     [31m[1m^[22m[39m
+ [90m 252 |[39m           [33m*[39m [33mFor[39m copy shortcut[33m:[39m [33mClick[39m [32m"Copy link"[39m below any slug to copy full shortlink[33m.[39m
+ [90m 253 |[39m         [33m<[39m[33m/[39m[33mem[39m[33m>[39m
+ [90m 254 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+ [31m[1m⨯[22m[39m ReferenceError: SLUG_LENGTH is not defined
+    at Home (pages/index.tsx:251:85)
+[0m [90m 249 |[39m       [33m<[39m[33mdiv[39m style[33m=[39m{{ marginTop[33m:[39m [35m24[39m[33m,[39m fontSize[33m:[39m [32m"0.95em"[39m[33m,[39m color[33m:[39m [32m"#444"[39m }}[33m>[39m
+ [90m 250 |[39m         [33m<[39m[33mem[39m[33m>[39m
+[31m[1m>[22m[39m[90m 251 |[39m           [33m*[39m [33mSlug[39m length is configurable ([35m4[39m [33m-[39m [35m25[39m characters[33m,[39m [36mwith[39m currently [36mset[39m at[33m:[39m {[33mSLUG_LENGTH[39m} characters  via [33m<[39m[33mcode[39m[33m>[39m[33m.[39menv[33m.[39mlocal[33m<[39m[35m/code>).<br /[39m[33m>[39m
+ [90m     |[39m                                                                                     [31m[1m^[22m[39m
+ [90m 252 |[39m           [33m*[39m [33mFor[39m copy shortcut[33m:[39m [33mClick[39m [32m"Copy link"[39m below any slug to copy full shortlink[33m.[39m
+ [90m 253 |[39m         [33m<[39m[33m/[39m[33mem[39m[33m>[39m
+ [90m 254 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+ [31m[1m⨯[22m[39m ReferenceError: SLUG_LENGTH is not defined
+    at Home (pages/index.tsx:251:85)
+[0m [90m 249 |[39m       [33m<[39m[33mdiv[39m style[33m=[39m{{ marginTop[33m:[39m [35m24[39m[33m,[39m fontSize[33m:[39m [32m"0.95em"[39m[33m,[39m color[33m:[39m [32m"#444"[39m }}[33m>[39m
+ [90m 250 |[39m         [33m<[39m[33mem[39m[33m>[39m
+[31m[1m>[22m[39m[90m 251 |[39m           [33m*[39m [33mSlug[39m length is configurable ([35m4[39m [33m-[39m [35m25[39m characters[33m,[39m [36mwith[39m currently [36mset[39m at[33m:[39m {[33mSLUG_LENGTH[39m} characters  via [33m<[39m[33mcode[39m[33m>[39m[33m.[39menv[33m.[39mlocal[33m<[39m[35m/code>).<br /[39m[33m>[39m
+ [90m     |[39m                                                                                     [31m[1m^[22m[39m
+ [90m 252 |[39m           [33m*[39m [33mFor[39m copy shortcut[33m:[39m [33mClick[39m [32m"Copy link"[39m below any slug to copy full shortlink[33m.[39m
+ [90m 253 |[39m         [33m<[39m[33m/[39m[33mem[39m[33m>[39m
+ [90m 254 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m {
+  page: [32m'/'[39m
+}
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET / [31m500[39m in 1032ms
+ReferenceError: SLUG_LENGTH is not defined
+    at Home (pages/index.tsx:251:85)
+[0m [90m 249 |[39m       [33m<[39m[33mdiv[39m style[33m=[39m{{ marginTop[33m:[39m [35m24[39m[33m,[39m fontSize[33m:[39m [32m"0.95em"[39m[33m,[39m color[33m:[39m [32m"#444"[39m }}[33m>[39m
+ [90m 250 |[39m         [33m<[39m[33mem[39m[33m>[39m
+[31m[1m>[22m[39m[90m 251 |[39m           [33m*[39m [33mSlug[39m length is configurable ([35m4[39m [33m-[39m [35m25[39m characters[33m,[39m [36mwith[39m currently [36mset[39m at[33m:[39m {[33mSLUG_LENGTH[39m} characters  via [33m<[39m[33mcode[39m[33m>[39m[33m.[39menv[33m.[39mlocal[33m<[39m[35m/code>).<br /[39m[33m>[39m
+ [90m     |[39m                                                                                     [31m[1m^[22m[39m
+ [90m 252 |[39m           [33m*[39m [33mFor[39m copy shortcut[33m:[39m [33mClick[39m [32m"Copy link"[39m below any slug to copy full shortlink[33m.[39m
+ [90m 253 |[39m         [33m<[39m[33m/[39m[33mem[39m[33m>[39m
+ [90m 254 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+ [31m[1m⨯[22m[39m ReferenceError: SLUG_LENGTH is not defined
+    at Home (pages/index.tsx:251:85)
+[0m [90m 249 |[39m       [33m<[39m[33mdiv[39m style[33m=[39m{{ marginTop[33m:[39m [35m24[39m[33m,[39m fontSize[33m:[39m [32m"0.95em"[39m[33m,[39m color[33m:[39m [32m"#444"[39m }}[33m>[39m
+ [90m 250 |[39m         [33m<[39m[33mem[39m[33m>[39m
+[31m[1m>[22m[39m[90m 251 |[39m           [33m*[39m [33mSlug[39m length is configurable ([35m4[39m [33m-[39m [35m25[39m characters[33m,[39m [36mwith[39m currently [36mset[39m at[33m:[39m {[33mSLUG_LENGTH[39m} characters  via [33m<[39m[33mcode[39m[33m>[39m[33m.[39menv[33m.[39mlocal[33m<[39m[35m/code>).<br /[39m[33m>[39m
+ [90m     |[39m                                                                                     [31m[1m^[22m[39m
+ [90m 252 |[39m           [33m*[39m [33mFor[39m copy shortcut[33m:[39m [33mClick[39m [32m"Copy link"[39m below any slug to copy full shortlink[33m.[39m
+ [90m 253 |[39m         [33m<[39m[33m/[39m[33mem[39m[33m>[39m
+ [90m 254 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+ [31m[1m⨯[22m[39m ReferenceError: SLUG_LENGTH is not defined
+    at Home (pages/index.tsx:251:85)
+[0m [90m 249 |[39m       [33m<[39m[33mdiv[39m style[33m=[39m{{ marginTop[33m:[39m [35m24[39m[33m,[39m fontSize[33m:[39m [32m"0.95em"[39m[33m,[39m color[33m:[39m [32m"#444"[39m }}[33m>[39m
+ [90m 250 |[39m         [33m<[39m[33mem[39m[33m>[39m
+[31m[1m>[22m[39m[90m 251 |[39m           [33m*[39m [33mSlug[39m length is configurable ([35m4[39m [33m-[39m [35m25[39m characters[33m,[39m [36mwith[39m currently [36mset[39m at[33m:[39m {[33mSLUG_LENGTH[39m} characters  via [33m<[39m[33mcode[39m[33m>[39m[33m.[39menv[33m.[39mlocal[33m<[39m[35m/code>).<br /[39m[33m>[39m
+ [90m     |[39m                                                                                     [31m[1m^[22m[39m
+ [90m 252 |[39m           [33m*[39m [33mFor[39m copy shortcut[33m:[39m [33mClick[39m [32m"Copy link"[39m below any slug to copy full shortlink[33m.[39m
+ [90m 253 |[39m         [33m<[39m[33m/[39m[33mem[39m[33m>[39m
+ [90m 254 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m {
+  page: [32m'/'[39m
+}
+ GET / [31m500[39m in 1664ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 3.3s
+ GET /favicon.ico [32m200[39m in 4255ms
+ GET /favicon.ico [32m200[39m in 683ms
+ GET /favicon.ico [32m200[39m in 607ms
+ReferenceError: SLUG_LENGTH is not defined
+    at Home (pages/index.tsx:251:85)
+[0m [90m 249 |[39m       [33m<[39m[33mdiv[39m style[33m=[39m{{ marginTop[33m:[39m [35m24[39m[33m,[39m fontSize[33m:[39m [32m"0.95em"[39m[33m,[39m color[33m:[39m [32m"#444"[39m }}[33m>[39m
+ [90m 250 |[39m         [33m<[39m[33mem[39m[33m>[39m
+[31m[1m>[22m[39m[90m 251 |[39m           [33m*[39m [33mSlug[39m length is configurable ([35m4[39m [33m-[39m [35m25[39m characters[33m,[39m [36mwith[39m currently [36mset[39m at[33m:[39m {[33mSLUG_LENGTH[39m} characters  via [33m<[39m[33mcode[39m[33m>[39m[33m.[39menv[33m.[39mlocal[33m<[39m[35m/code>).<br /[39m[33m>[39m
+ [90m     |[39m                                                                                     [31m[1m^[22m[39m
+ [90m 252 |[39m           [33m*[39m [33mFor[39m copy shortcut[33m:[39m [33mClick[39m [32m"Copy link"[39m below any slug to copy full shortlink[33m.[39m
+ [90m 253 |[39m         [33m<[39m[33m/[39m[33mem[39m[33m>[39m
+ [90m 254 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+ [31m[1m⨯[22m[39m ReferenceError: SLUG_LENGTH is not defined
+    at Home (pages/index.tsx:251:85)
+[0m [90m 249 |[39m       [33m<[39m[33mdiv[39m style[33m=[39m{{ marginTop[33m:[39m [35m24[39m[33m,[39m fontSize[33m:[39m [32m"0.95em"[39m[33m,[39m color[33m:[39m [32m"#444"[39m }}[33m>[39m
+ [90m 250 |[39m         [33m<[39m[33mem[39m[33m>[39m
+[31m[1m>[22m[39m[90m 251 |[39m           [33m*[39m [33mSlug[39m length is configurable ([35m4[39m [33m-[39m [35m25[39m characters[33m,[39m [36mwith[39m currently [36mset[39m at[33m:[39m {[33mSLUG_LENGTH[39m} characters  via [33m<[39m[33mcode[39m[33m>[39m[33m.[39menv[33m.[39mlocal[33m<[39m[35m/code>).<br /[39m[33m>[39m
+ [90m     |[39m                                                                                     [31m[1m^[22m[39m
+ [90m 252 |[39m           [33m*[39m [33mFor[39m copy shortcut[33m:[39m [33mClick[39m [32m"Copy link"[39m below any slug to copy full shortlink[33m.[39m
+ [90m 253 |[39m         [33m<[39m[33m/[39m[33mem[39m[33m>[39m
+ [90m 254 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+ [31m[1m⨯[22m[39m ReferenceError: SLUG_LENGTH is not defined
+    at Home (pages/index.tsx:251:85)
+[0m [90m 249 |[39m       [33m<[39m[33mdiv[39m style[33m=[39m{{ marginTop[33m:[39m [35m24[39m[33m,[39m fontSize[33m:[39m [32m"0.95em"[39m[33m,[39m color[33m:[39m [32m"#444"[39m }}[33m>[39m
+ [90m 250 |[39m         [33m<[39m[33mem[39m[33m>[39m
+[31m[1m>[22m[39m[90m 251 |[39m           [33m*[39m [33mSlug[39m length is configurable ([35m4[39m [33m-[39m [35m25[39m characters[33m,[39m [36mwith[39m currently [36mset[39m at[33m:[39m {[33mSLUG_LENGTH[39m} characters  via [33m<[39m[33mcode[39m[33m>[39m[33m.[39menv[33m.[39mlocal[33m<[39m[35m/code>).<br /[39m[33m>[39m
+ [90m     |[39m                                                                                     [31m[1m^[22m[39m
+ [90m 252 |[39m           [33m*[39m [33mFor[39m copy shortcut[33m:[39m [33mClick[39m [32m"Copy link"[39m below any slug to copy full shortlink[33m.[39m
+ [90m 253 |[39m         [33m<[39m[33m/[39m[33mem[39m[33m>[39m
+ [90m 254 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m {
+  page: [32m'/'[39m
+}
+ GET / [31m500[39m in 890ms
+ GET /favicon.ico [32m200[39m in 656ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 12.7s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.4s
+ GET / [32m200[39m in 7563ms
+ GET / [32m200[39m in 660ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET / [32m200[39m in 770ms
+ GET / [32m200[39m in 946ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 2.8s
+ GET /favicon.ico [32m200[39m in 3847ms
+ GET /favicon.ico [32m200[39m in 580ms
+ GET /favicon.ico [32m200[39m in 585ms
+ GET /favicon.ico [32m200[39m in 566ms
+ [32m[1m✓[22m[39m Compiled /api/links/create in 168ms
+ POST /api/links/create [32m201[39m in 283ms
+ POST /api/links/create [32m201[39m in 123ms
+ POST /api/links/create [32m201[39m in 127ms
+ POST /api/links/create [32m201[39m in 135ms
+ [32m[1m✓[22m[39m Compiled /api/links/update in 134ms
+ POST /api/links/update [33m400[39m in 148ms
+ POST /api/links/update [33m400[39m in 120ms
+ [32m[1m✓[22m[39m Compiled /[slug] in 248ms
+ GET /my1stlink [34m307[39m in 447ms
+ GET /my1stlink [34m307[39m in 305ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 13.1s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.8s
+ GET / [32m200[39m in 6959ms
+ GET / [32m200[39m in 571ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET / [32m200[39m in 605ms
+ GET / [32m200[39m in 771ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 2.4s
+ GET /favicon.ico [32m200[39m in 3313ms
+ GET /favicon.ico [32m200[39m in 569ms
+ GET /favicon.ico [32m200[39m in 502ms
+ GET /favicon.ico [32m200[39m in 496ms
+ [32m[1m✓[22m[39m Compiled /[slug] in 278ms
+ GET /my1stlink [34m307[39m in 508ms
+ GET /my1stlink [34m307[39m in 273ms
+ [32m[1m✓[22m[39m Compiled /api/links/update in 201ms
+BODY {
+  internalId: [32m'UWK_31B755XP'[39m,
+  longUrl: [32m'https://docs.google.com/spreadsheets/d/1UAAOQvLQfLBuYKOL0HsZ7dYy4aTQ8UGs/edit?usp=drive_link&ouid=117947049907504187636&rtpof=true&sd=true&1234'[39m
+}
+ POST /api/links/update [32m200[39m in 281ms
+ [32m[1m✓[22m[39m Compiled /api/links/delete in 142ms
+ POST /api/links/delete [33m400[39m in 152ms
+ POST /api/links/delete [33m400[39m in 129ms
+ POST /api/links/delete [33m400[39m in 191ms
+BODY {
+  internalId: [32m'Jh7WHNzCk9jf'[39m,
+  longUrl: [32m'https://docs.google.com/spreadsheets/d/1UAAOQvLQfLBuYKOL0HsZ7dYy4aTQ8UGs/edit?usp=drive_link&ouid=117947049907504187636&rtpof=true&sd=true&1222'[39m
+}
+ POST /api/links/update [32m200[39m in 124ms
+BODY {
+  internalId: [32m'3srdeTzAH2-N'[39m,
+  longUrl: [32m'https://docs.google.com/spreadsheets/d/1UAAOQvLQfLBuYKOL0HsZ7dYy4aTQ8UGs/edit?usp=drive_link&ouid=117947049907504187636&rtpof=true&sd=true&12222222'[39m
+}
+ POST /api/links/update [32m200[39m in 133ms
+ POST /api/links/delete [33m400[39m in 134ms
+ POST /api/links/delete [33m400[39m in 134ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 17.2s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 3.2s
+ GET / [32m200[39m in 8577ms
+ GET / [32m200[39m in 634ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET / [32m200[39m in 693ms
+ GET / [32m200[39m in 955ms
+ GET / [32m200[39m in 821ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 2.9s
+ GET /favicon.ico [32m200[39m in 4029ms
+ GET /favicon.ico [32m200[39m in 512ms
+ GET /favicon.ico [32m200[39m in 550ms
+ GET /favicon.ico [32m200[39m in 522ms
+ GET /favicon.ico [32m200[39m in 491ms
+ [32m[1m✓[22m[39m Compiled /api/links/create in 228ms
+ POST /api/links/create [32m201[39m in 365ms
+ POST /api/links/create [32m201[39m in 125ms
+ [32m[1m✓[22m[39m Compiled /api/links/update in 131ms
+BODY {
+  internalId: [32m'k3BrdmO44hFd'[39m,
+  longUrl: [32m'https://docs.google.com/spreadsheets/d/1UAAOQvLQfLBuYKOL0HsZ7dYy4aTQ8UGs/edit?usp=drive_link&ouid=117947049907504187636&rtpof=true&sd=true&42424'[39m
+}
+ POST /api/links/update [32m200[39m in 160ms
+BODY {
+  internalId: [32m'OWawukgiEMzT'[39m,
+  longUrl: [32m'https://docs.google.com/spreadsheets/d/1UAAOQvLQfLBuYKOL0HsZ7dYy4aTQ8UGs/edit?usp=drive_link&ouid=117947049907504187636&rtpof=true&sd=true&7890'[39m
+}
+ POST /api/links/update [32m200[39m in 128ms
+ [32m[1m✓[22m[39m Compiled /api/links/delete in 135ms
+BODY { internalId: [32m'OWawukgiEMzT'[39m }
+ POST /api/links/delete [32m200[39m in 166ms
+BODY { internalId: [32m'k3BrdmO44hFd'[39m }
+ POST /api/links/delete [32m200[39m in 151ms
+BODY { internalId: [32m'lE_BvK4FNjEv'[39m }
+ POST /api/links/delete [32m200[39m in 127ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 14.3s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 3.3s
+ [32m[1m✓[22m[39m Compiled /_error in 411ms
+ GET / [31m500[39m in 7329ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET / [31m500[39m in 870ms
+ GET / [31m500[39m in 1169ms
+ GET / [31m500[39m in 1571ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 3.4s
+ GET /favicon.ico [31m500[39m in 3877ms
+ GET /favicon.ico [31m500[39m in 633ms
+ GET / [31m500[39m in 1266ms
+ GET /favicon.ico [31m500[39m in 546ms
+ GET /favicon.ico [31m500[39m in 601ms
+ GET / [31m500[39m in 1163ms
+ GET /favicon.ico [31m500[39m in 638ms
+ GET /favicon.ico [31m500[39m in 495ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 14.9s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 3.4s
+ GET / [32m200[39m in 4388ms
+ GET / [32m200[39m in 653ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET / [32m200[39m in 510ms
+ GET / [32m200[39m in 737ms
+ GET / [32m200[39m in 829ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 2.9s
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 4310ms
+ GET / [32m200[39m in 4589ms
+ GET /favicon.ico [32m200[39m in 7821ms
+ GET /favicon.ico [32m200[39m in 631ms
+ GET /favicon.ico [32m200[39m in 474ms
+ GET /favicon.ico [32m200[39m in 462ms
+ GET /favicon.ico [32m200[39m in 450ms
+ GET /favicon.ico [32m200[39m in 549ms
+ GET /api/links/list?q=&page=2&perPage=10 [32m200[39m in 128ms
+ GET /api/links/list?q=&page=3&perPage=10 [32m200[39m in 127ms
+ [32m[1m✓[22m[39m Compiled /api/links/delete in 158ms
+BODY { internalId: [32m'bI_KJhOMzohj'[39m }
+ POST /api/links/delete [32m200[39m in 214ms
+BODY { internalId: [32m'65udWL-BQR6p'[39m }
+ POST /api/links/delete [32m200[39m in 129ms
+BODY { internalId: [32m'wakwUi7y17Gg'[39m }
+ POST /api/links/delete [32m200[39m in 151ms
+ GET /api/links/list?q=&page=4&perPage=10 [32m200[39m in 147ms
+ GET /api/links/list?q=&page=3&perPage=10 [32m200[39m in 133ms
+ GET /api/links/list?q=&page=4&perPage=10 [34m304[39m in 139ms
+ GET /api/links/list?q=&page=5&perPage=10 [32m200[39m in 135ms
+ GET /api/links/list?q=&page=6&perPage=10 [32m200[39m in 141ms
+ GET /api/links/list?q=&page=7&perPage=10 [32m200[39m in 129ms
+ GET /api/links/list?q=&page=6&perPage=10 [34m304[39m in 115ms
+ GET /api/links/list?q=&page=5&perPage=10 [34m304[39m in 138ms
+ GET /api/links/list?q=&page=4&perPage=10 [34m304[39m in 149ms
+ GET /api/links/list?q=&page=3&perPage=10 [34m304[39m in 117ms
+ GET /api/links/list?q=&page=2&perPage=10 [32m200[39m in 116ms
+ GET /api/links/list?q=&page=1&perPage=10 [32m200[39m in 122ms
+ GET / [32m200[39m in 317ms
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 154ms
+ GET /favicon.ico [32m200[39m in 538ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> next dev --turbopack
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 13.2s
+ [37m[1m○[22m[39m Compiling /api/links/list ...
+ GET /api/links/list?q=&page=1&perPage=20 [32m200[39m in 5653ms
+ [32m[1m✓[22m[39m Compiled /api/links/list in 7.5s
+ GET / [32m200[39m in 8230ms
+ GET / [32m200[39m in 566ms
+ [37m[1m○[22m[39m Compiling /favicon.ico ...
+ GET / [32m200[39m in 530ms
+ GET / [32m200[39m in 745ms
+ GET / [32m200[39m in 773ms
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 352ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 2.7s
+ GET /favicon.ico [32m200[39m in 3831ms
+ GET / [32m200[39m in 1312ms
+ GET /api/links/list?q=&page=1&perPage=5 [32m200[39m in 276ms
+ GET /favicon.ico [32m200[39m in 732ms
+ GET /favicon.ico [32m200[39m in 518ms
+ GET /favicon.ico [32m200[39m in 528ms
+ GET /favicon.ico [32m200[39m in 508ms
+ GET /api/links/list?q=&page=2&perPage=5 [32m200[39m in 118ms
+ GET /api/links/list?q=&page=3&perPage=5 [32m200[39m in 111ms
+ GET /api/links/list?q=&page=4&perPage=5 [32m200[39m in 118ms
+ GET /api/links/list?q=&page=5&perPage=5 [32m200[39m in 159ms
+ GET /api/links/list?q=&page=1&perPage=50 [32m200[39m in 123ms
+ GET /api/links/list?q=&page=1&perPage=5 [34m304[39m in 129ms
+ [32m[1m✓[22m[39m Compiled /[slug] in 251ms
+ [37m[1m○[22m[39m Compiling /_not-found/page ...
+ [32m[1m✓[22m[39m Compiled /_not-found/page in 3.8s
+ GET /zjcCqb [33m404[39m in 4990ms
+ GET / [32m200[39m in 386ms
+ GET /api/links/list?q=&page=1&perPage=10 [34m304[39m in 146ms
+ GET /favicon.ico [32m200[39m in 505ms
+ GET /XyApfM [33m404[39m in 698ms
+ GET /api/links/list?q=&page=1&perPage=50 [34m304[39m in 137ms
+ GET /KJ5zTR2Xht [33m404[39m in 670ms
+^C[?25h
+
+[?2004h[01;32msri@LAPTOP-II8NBB9F[00m:[01;34m/mnt/c/Work/ShalusriInc/Relinkr/apps/client[00m$ npm run dev
+[?2004l
+> client@0.1.0 dev
+> ne
