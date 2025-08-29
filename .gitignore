@@ -34,3 +34,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# project documentation and planning files
+.info
+ImplementationPlan.md
+TaskList.md
