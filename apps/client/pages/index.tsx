@@ -145,7 +145,6 @@ export default function Home({ user }: { user: any }) {
     }
   }
 
-
   // Get sort indicator
   function getSortIndicator(field: 'slug' | 'longUrl' | 'clicks') {
     if (sortField !== field) return ' ↕️';
@@ -214,6 +213,7 @@ export default function Home({ user }: { user: any }) {
     setEditSlug(link.slug);
     setEditUrl(link.longUrl);
   }
+  
   async function saveEdit(internalId: string) {
     showInfo("Updating link...");
     const res = await fetch("/api/links/update", {
@@ -242,6 +242,7 @@ export default function Home({ user }: { user: any }) {
       showError(data.error || "Failed to update link");
     }
   }
+  
   // Delete logic
   async function handleDelete(internalId: string) {
     if (!window.confirm("Delete this link?")) return;
@@ -291,6 +292,7 @@ export default function Home({ user }: { user: any }) {
       showError(data.error || "Failed to delete link");
     }
   }
+  
   // Copy to clipboard
   function doCopy(slug: string) {
     const baseUrl =
@@ -313,291 +315,295 @@ export default function Home({ user }: { user: any }) {
           100% { transform: scale(1); }
         }
       `}</style>
-      <main style={{ maxWidth: 850, margin: "auto", padding: 30 }}>
-      {/* User Profile Header */}
-      <div style={{ 
-        display: 'flex', 
-        justifyContent: 'space-between', 
-        alignItems: 'center',
-        marginBottom: 20,
-        padding: 15,
-        background: '#f8f9fa',
-        borderRadius: 8,
-        border: '1px solid #e9ecef'
-      }}>
-        <div>
-          <h2 style={{ margin: 0, marginBottom: 5 }}>
-            Welcome, {user?.name || user?.email}!
-          </h2>
-          <div style={{ fontSize: '0.9em', color: '#666' }}>
-            {user?.email && <span>Email: {user.email}</span>}
-            {user?.image && (
-              <img 
-                src={user.image} 
-                alt="Profile" 
-                style={{ 
-                  width: 32, 
-                  height: 32, 
-                  borderRadius: '50%', 
-                  marginLeft: 10,
-                  verticalAlign: 'middle'
-                }} 
-              />
-            )}
+      <main>
+        {/* Header */}
+        <div style={{ 
+          display: 'flex', 
+          justifyContent: 'space-between', 
+          alignItems: 'center',
+          marginBottom: 20,
+          padding: 15,
+          background: '#f8f9fa',
+          borderRadius: 8,
+          border: '1px solid #e9ecef'
+        }}>
+          <div>
+            <h1 style={{ margin: 0, marginBottom: 5, color: '#2563eb' }}>
+              Relinkr
+            </h1>
+            <h2 style={{ margin: 0, marginBottom: 5, fontSize: '1.2em' }}>
+              Welcome, {user?.name || user?.email}!
+            </h2>
+            <div style={{ fontSize: '0.9em', color: '#666' }}>
+              {user?.email && <span>Email: {user.email}</span>}
+              {user?.image && (
+                <img 
+                  src={user.image} 
+                  alt="Profile" 
+                  style={{ 
+                    width: 32, 
+                    height: 32, 
+                    borderRadius: '50%', 
+                    marginLeft: 10,
+                    verticalAlign: 'middle'
+                  }} 
+                />
+              )}
+            </div>
+          </div>
+          <div>
+            <button
+              onClick={() => signOut()}
+              style={{
+                padding: '8px 16px',
+                background: '#dc3545',
+                color: 'white',
+                border: 'none',
+                borderRadius: 4,
+                cursor: 'pointer',
+                fontSize: '0.9em'
+              }}
+              onMouseOver={(e) => e.currentTarget.style.background = '#c82333'}
+              onMouseOut={(e) => e.currentTarget.style.background = '#dc3545'}
+            >
+              Sign Out
+            </button>
           </div>
         </div>
-        <div>
-          <button
-            onClick={() => signOut()}
-            style={{
-              padding: '8px 16px',
-              background: '#dc3545',
-              color: 'white',
-              border: 'none',
-              borderRadius: 4,
-              cursor: 'pointer',
-              fontSize: '0.9em'
-            }}
-            onMouseOver={(e) => e.currentTarget.style.background = '#c82333'}
-            onMouseOut={(e) => e.currentTarget.style.background = '#dc3545'}
-          >
-            Sign Out
-          </button>
-        </div>
-      </div>
 
-      {/* Create new link */}
-      <form onSubmit={handleCreate} style={{ margin: "18px 0 8px 0" }}>
-        <b>Create New Short Link</b>
-        <div>
-          <input
-            type="url"
-            required
-            placeholder="Destination URL (must start with https://)"
-            value={longUrl}
-            onChange={(e) => setLongUrl(e.target.value)}
-            style={{ width: "56%", marginRight: 8 }}
-          />
-          <input
-            type="text"
-            placeholder="Custom slug (optional)"
-            value={customSlug}
-            onChange={(e) => setCustomSlug(e.target.value)}
-            style={{ width: 160, marginRight: 8 }}
-          />
-          <button type="submit">Create</button>
-        </div>
-      </form>
+        {/* Create new link */}
+        <form onSubmit={handleCreate} style={{ margin: "18px 0 8px 0" }}>
+          <b>Create New Short Link</b>
+          <div>
+            <input
+              type="url"
+              required
+              placeholder="Destination URL (must start with https://)"
+              value={longUrl}
+              onChange={(e) => setLongUrl(e.target.value)}
+              style={{ width: "56%", marginRight: 8 }}
+            />
+            <input
+              type="text"
+              placeholder="Custom slug (optional)"
+              value={customSlug}
+              onChange={(e) => setCustomSlug(e.target.value)}
+              style={{ width: 160, marginRight: 8 }}
+            />
+            <button type="submit">Create</button>
+          </div>
+        </form>
 
-      {/* Search and page size */}
-      <div style={{ margin: "14px 0 3px 0" }}>
-        <span>
-          <b>Search</b>:{" "}
-          <input
-            value={search}
+        {/* Search and page size */}
+        <div style={{ margin: "14px 0 3px 0" }}>
+          <span>
+            <b>Search</b>:{" "}
+            <input
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                setPage(1);
+              }}
+              placeholder="Matches slug or URL"
+              style={{
+                width: "36%",
+                marginRight: 10,
+                padding: 7,
+                border: "1px solid #888",
+                borderRadius: 3,
+              }}
+            />
+          </span>
+          Rows per page:{" "}
+          <select
+            value={perPage}
             onChange={(e) => {
-              setSearch(e.target.value);
+              setPerPage(parseInt(e.target.value, 10));
               setPage(1);
             }}
-            placeholder="Matches slug or URL"
-            style={{
-              width: "36%",
-              marginRight: 10,
-              padding: 7,
-              border: "1px solid #888",
-              borderRadius: 3,
-            }}
-          />
-        </span>
-        Rows per page:{" "}
-        <select
-          value={perPage}
-          onChange={(e) => {
-            setPerPage(parseInt(e.target.value, 10));
-            setPage(1);
+            style={{ marginLeft: 6 }}
+          >
+            {[5, 10, 20, 50].map((n) => (
+              <option key={n} value={n}>
+                {n}
+              </option>
+            ))}
+          </select>
+        </div>
+        
+        {/* Table */}
+        <table
+          style={{
+            width: "100%",
+            borderCollapse: "collapse",
+            margin: "12px 0",
+            background: "#fff",
           }}
-          style={{ marginLeft: 6 }}
         >
-          {[5, 10, 20, 50].map((n) => (
-            <option key={n} value={n}>
-              {n}
-            </option>
-          ))}
-        </select>
-      </div>
-      {/* Table */}
-      <table
-        style={{
-          width: "100%",
-          borderCollapse: "collapse",
-          margin: "12px 0",
-          background: "#fff",
-        }}
-      >
-        <thead>
-          <tr style={{ background: "#eef", fontWeight: 600 }}>
-            <th 
-              style={{ 
-                padding: "8px 2px", 
-                cursor: "pointer", 
-                userSelect: "none",
-                borderBottom: "2px solid #ddd"
-              }}
-              onClick={() => handleSort('slug')}
-              title="Click to sort by Slug"
-            >
-              Slug{getSortIndicator('slug')}
-            </th>
-            <th 
-              style={{ 
-                padding: "8px 2px", 
-                cursor: "pointer", 
-                userSelect: "none",
-                borderBottom: "2px solid #ddd"
-              }}
-              onClick={() => handleSort('longUrl')}
-              title="Click to sort by Destination URL"
-            >
-              Destination URL{getSortIndicator('longUrl')}
-            </th>
-            <th 
-              style={{ 
-                padding: "8px 2px", 
-                cursor: "pointer", 
-                userSelect: "none",
-                borderBottom: "2px solid #ddd"
-              }}
-              onClick={() => handleSort('clicks')}
-              title="Click to sort by Click Count"
-            >
-              Analytics{getSortIndicator('clicks')}
-            </th>
-            <th style={{ padding: "8px 2px", borderBottom: "2px solid #ddd" }}>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {links.length === 0 ? (
-            <tr>
-              <td colSpan={4} style={{ textAlign: "center" }}>
-                No links found.
-              </td>
-            </tr>
-          ) : (
-            links.map((link) => (
-              <tr 
-                key={link.internalId}
-                style={{
-                  backgroundColor: highlightedLinkId === link.internalId 
-                    ? '#d4edda' // Green for newly created
-                    : updatedLinkId === link.internalId 
-                    ? '#fff3cd' // Yellow for updated
-                    : 'transparent',
-                  border: highlightedLinkId === link.internalId 
-                    ? '2px solid #28a745' // Green border for newly created
-                    : updatedLinkId === link.internalId 
-                    ? '2px solid #ffc107' // Yellow border for updated
-                    : 'none',
-                  transition: 'all 0.3s ease-in-out',
-                  animation: (highlightedLinkId === link.internalId || updatedLinkId === link.internalId) 
-                    ? 'pulse 0.5s ease-in-out' 
-                    : 'none'
+          <thead>
+            <tr style={{ background: "#eef", fontWeight: 600 }}>
+              <th 
+                style={{ 
+                  padding: "8px 2px", 
+                  cursor: "pointer", 
+                  userSelect: "none",
+                  borderBottom: "2px solid #ddd"
                 }}
+                onClick={() => handleSort('slug')}
+                title="Click to sort by Slug"
               >
-                <td>
-                  <div style={{ fontWeight: 600 }}>{link.slug}</div>
-                  <button
-                    type="button"
-                    style={{
-                      fontSize: "0.9em",
-                      color: "#06f",
-                      background: "none",
-                      border: "none",
-                      cursor: "pointer",
-                      textAlign: "left",
-                      padding: 0,
-                      marginTop: 2,
-                    }}
-                    onClick={() => doCopy(link.slug)}
-                  >
-                    Copy link
-                  </button>
-                </td>
-                <td>
-                  {editSlug === link.slug ? (
-                    <input
-                      value={editUrl}
-                      onChange={(e) => setEditUrl(e.target.value)}
-                      style={{ width: "90%" }}
-                    />
-                  ) : (
-                    link.longUrl
-                  )}
-                </td>
-                <td style={{ textAlign: "center", color: "#666" }}>
-                  <span style={{ fontSize: "0.9em" }}>
-                    Clicks: <strong>{clickCounts[link.slug] || 0}</strong>
-                  </span>
-                </td>
-                <td>
-                  {editSlug === link.slug ? (
-                    <>
-                      <button
-                        onClick={() => saveEdit(link.internalId)}
-                        style={{ marginRight: 7 }}
-                      >
-                        Save
-                      </button>
-                      <button
-                        onClick={() => {
-                          setEditSlug(null);
-                          setEditUrl("");
-                        }}
-                      >
-                        Cancel
-                      </button>
-                    </>
-                  ) : (
-                    <>
-                      <button
-                        onClick={() => startEdit(link)}
-                        style={{ marginRight: 7 }}
-                      >
-                        Edit
-                      </button>
-                      <button onClick={() => handleDelete(link.internalId)}>
-                        Delete
-                      </button>
-                    </>
-                  )}
+                Slug{getSortIndicator('slug')}
+              </th>
+              <th 
+                style={{ 
+                  padding: "8px 2px", 
+                  cursor: "pointer", 
+                  userSelect: "none",
+                  borderBottom: "2px solid #ddd"
+                }}
+                onClick={() => handleSort('longUrl')}
+                title="Click to sort by Destination URL"
+              >
+                Destination URL{getSortIndicator('longUrl')}
+              </th>
+              <th 
+                style={{ 
+                  padding: "8px 2px", 
+                  cursor: "pointer", 
+                  userSelect: "none",
+                  borderBottom: "2px solid #ddd"
+                }}
+                onClick={() => handleSort('clicks')}
+                title="Click to sort by Click Count"
+              >
+                Analytics{getSortIndicator('clicks')}
+              </th>
+              <th style={{ padding: "8px 2px", borderBottom: "2px solid #ddd" }}>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {links.length === 0 ? (
+              <tr>
+                <td colSpan={4} style={{ textAlign: "center" }}>
+                  No links found.
                 </td>
               </tr>
-            ))
-          )}
-        </tbody>
-      </table>
-      {/* Pagination */}
-      <div style={{ marginTop: 14 }}>
-        Page {page} of {totalPages}
-        <button
-          onClick={() => setPage((p) => Math.max(1, p - 1))}
-          disabled={page === 1}
-          style={{ marginLeft: 12, marginRight: 6 }}
-        >
-          Prev
-        </button>
-        <button
-          onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-          disabled={page === totalPages}
-        >
-          Next
-        </button>
-      </div>
-      {loading && <div>Loading...</div>}
-      
-      {/* Toast Container */}
-      <ToastContainer toasts={toasts} onRemove={removeToast} />
-    </main>
+            ) : (
+              links.map((link) => (
+                <tr 
+                  key={link.internalId}
+                  style={{
+                    backgroundColor: highlightedLinkId === link.internalId 
+                      ? '#d4edda' // Green for newly created
+                      : updatedLinkId === link.internalId 
+                      ? '#fff3cd' // Yellow for updated
+                      : 'transparent',
+                    border: highlightedLinkId === link.internalId 
+                      ? '2px solid #28a745' // Green border for newly created
+                      : updatedLinkId === link.internalId 
+                      ? '2px solid #ffc107' // Yellow border for updated
+                      : 'none',
+                    transition: 'all 0.3s ease-in-out',
+                    animation: (highlightedLinkId === link.internalId || updatedLinkId === link.internalId) 
+                      ? 'pulse 0.5s ease-in-out' 
+                      : 'none'
+                  }}
+                >
+                  <td>
+                    <div style={{ fontWeight: 600 }}>{link.slug}</div>
+                    <button
+                      type="button"
+                      style={{
+                        fontSize: "0.9em",
+                        color: "#06f",
+                        background: "none",
+                        border: "none",
+                        cursor: "pointer",
+                        textAlign: "left",
+                        padding: 0,
+                        marginTop: 2,
+                      }}
+                      onClick={() => doCopy(link.slug)}
+                    >
+                      Copy link
+                    </button>
+                  </td>
+                  <td>
+                    {editSlug === link.slug ? (
+                      <input
+                        value={editUrl}
+                        onChange={(e) => setEditUrl(e.target.value)}
+                        style={{ width: "90%" }}
+                      />
+                    ) : (
+                      link.longUrl
+                    )}
+                  </td>
+                  <td style={{ textAlign: "center", color: "#666" }}>
+                    <span style={{ fontSize: "0.9em" }}>
+                      Clicks: <strong>{clickCounts[link.slug] || 0}</strong>
+                    </span>
+                  </td>
+                  <td>
+                    {editSlug === link.slug ? (
+                      <>
+                        <button
+                          onClick={() => saveEdit(link.internalId)}
+                          style={{ marginRight: 7 }}
+                        >
+                          Save
+                        </button>
+                        <button
+                          onClick={() => {
+                            setEditSlug(null);
+                            setEditUrl("");
+                          }}
+                        >
+                          Cancel
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        <button
+                          onClick={() => startEdit(link)}
+                          style={{ marginRight: 7 }}
+                        >
+                          Edit
+                        </button>
+                        <button onClick={() => handleDelete(link.internalId)}>
+                          Delete
+                        </button>
+                      </>
+                    )}
+                  </td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+        
+        {/* Pagination */}
+        <div style={{ marginTop: 14 }}>
+          Page {page} of {totalPages}
+          <button
+            onClick={() => setPage((p) => Math.max(1, p - 1))}
+            disabled={page === 1}
+            style={{ marginLeft: 12, marginRight: 6 }}
+          >
+            Prev
+          </button>
+          <button
+            onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+            disabled={page === totalPages}
+          >
+            Next
+          </button>
+        </div>
+        {loading && <div>Loading...</div>}
+        
+        {/* Toast Container */}
+        <ToastContainer toasts={toasts} onRemove={removeToast} />
+      </main>
     </>
   );
 }
-// This is the main dashboard page for authenticated users to create, view, edit, and delete their short links.
