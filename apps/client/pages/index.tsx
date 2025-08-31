@@ -5,6 +5,12 @@ import { authOptions } from "./api/auth/[...nextauth]";
 import { signOut } from "next-auth/react";
 import { ToastContainer, useToast } from "../components/Toast";
 
+type User = {
+  name?: string;
+  email?: string;
+  image?: string;
+};
+
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const session = await getServerSession(context.req, context.res, authOptions);
   if (!session) {
@@ -21,7 +27,7 @@ type LinkEntry = {
   ownerId: string;
 };
 
-export default function Home({ user }: { user: any }) {
+export default function Home({ user }: { user: User }) {
   // Toast notifications
   const { toasts, removeToast, showSuccess, showError, showInfo } = useToast();
   

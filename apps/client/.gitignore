@@ -21,7 +21,7 @@ apps/*/out/
 # Local env and secrets files (never commit these!)
 .env
 .env.*
-!.env.example
+!.env.example # keep example file
 
 
 # Mac/Linux/Windows system files

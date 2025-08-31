@@ -19,22 +19,40 @@ Relinkr is a modern, self-hosted URL shortener that provides enterprise-grade fe
 
 ## Quick Start
 
-### Using Docker Compose (Recommended)
+### Using Docker Compose (Recommended) ⭐
 
 ```bash
 # Clone the repository
 git clone https://github.com/knightsri/Relinkr.git
 cd Relinkr
 
-# Copy environment file and configure
+# Step 1: Set up your OAuth credentials (one-time setup)
 cp apps/client/.env.example apps/client/.env.local
-# Edit .env.local with your OAuth credentials
+# Edit .env.local with your GitHub and Google OAuth credentials
 
-# Start with Docker Compose
-docker-compose up -d
+# Step 2: Deploy with Docker (credentials automatically copied)
+docker-compose up --build -d
 
 # Your Relinkr instance is now running at http://localhost:3000
 ```
+
+**🔄 How Docker Handles Environment Variables:**
+- `docker-compose up` **automatically copies OAuth credentials** from `.env.local` to `.env.docker`
+- Docker containers use `.env.docker` for runtime configuration
+- Containers never read `.env.local` directly (keeps secrets isolated)
+
+**📋 Important Notes:**
+- **Setup OAuth credentials once** in `.env.local`, Docker handles the rest
+- All dependencies (Node.js, npm, Redis) are included in containers
+- `docker-compose stop` stops, `docker-compose up -d` restarts
+- See `DOCKER_README.md` for detailed Docker commands and troubleshooting
+
+**✨ What's Included in Docker Setup:**
+✅ Next.js application with custom Dockerfile for optimal performance
+✅ Redis database container for fast URL lookups and analytics
+✅ Automatic OAuth credential sync for GitHub and Google authentication
+✅ Network isolation and security best practices
+✅ Production-ready container images
 
 ### Manual Installation
 
@@ -61,28 +79,32 @@ npm run dev
 
 ### Environment Variables
 
-Create a `.env.local` file in `apps/client/` with the following variables:
+**For Docker Container Setup** (Recommended):
+Create `.env.local` file in `apps/client/` - Docker automatically copies OAuth credentials:
 
 ```env
 # NextAuth.js Configuration
 NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=your-secret-key-here
 
-# OAuth Providers
+# OAuth Providers (copied automatically to .env.docker for containerized auth)
 GITHUB_CLIENT_ID=your-github-client-id
 GITHUB_CLIENT_SECRET=your-github-client-secret
 GOOGLE_CLIENT_ID=your-google-client-id
 GOOGLE_CLIENT_SECRET=your-google-client-secret
 
-# Redis Configuration
-REDIS_URL=redis://localhost:6379
+# Redis Configuration (auto-managed in Docker)
+REDIS_URL=redis://redis:6379
 
-# Optional: Slug length (4-25 characters, default: 10)
+# Application Settings
 SLUG_LENGTH=10
-
-# Optional: Highlight duration for new/updated links (1-5 seconds, default: 3)
 NEXT_PUBLIC_HIGHLIGHT_DURATION=3
 ```
+
+**For Manual Installation**:
+Create `.env.local` file in `apps/client/` (same variables as above, but set `REDIS_URL=redis://localhost:6379`)
+
+**📝 Note**: Docker containers use `.env.docker` internally but sync from your `.env.local` - no manual setup needed!
 
 ### Setting up OAuth
 
