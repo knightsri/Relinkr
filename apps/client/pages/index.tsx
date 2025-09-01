@@ -4,6 +4,7 @@ import { getServerSession } from "next-auth/next";
 import { authOptions } from "./api/auth/[...nextauth]";
 import { signOut } from "next-auth/react";
 import { ToastContainer, useToast } from "../components/Toast";
+import ThemeSwitcher from "../components/ThemeSwitcher";
 
 type User = {
   name?: string;
@@ -357,10 +358,12 @@ export default function Home({ user }: { user: User }) {
               )}
             </div>
           </div>
-          <div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <ThemeSwitcher />
             <button
               onClick={() => signOut()}
               style={{
+                marginLeft: '1rem',
                 padding: '8px 16px',
                 background: '#dc3545',
                 color: 'white',

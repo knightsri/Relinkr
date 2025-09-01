@@ -177,6 +177,40 @@ Content-Type: application/json
 GET /api/analytics/counts?slugs=slug1&slugs=slug2
 ```
 
+## Theming
+
+Relinkr includes a simple and extensible theming system that allows for complete visual customization. The theming system is built with CSS variables, making it easy for anyone to create new themes or "skins."
+
+### How to Create a New Theme
+
+1.  **Create a CSS File:** In the `apps/client/styles/themes` directory, create a new CSS file for your theme (e.g., `my-theme.css`).
+
+2.  **Define Theme Variables:** In your new CSS file, define the color palette and font styles using CSS variables under a unique class name. For example:
+
+    ```css
+    .my-theme {
+      --background: #f0f0f0;
+      --foreground: #333333;
+      --primary: #ff6347;
+      --primary-foreground: #ffffff;
+      --font-sans: "Roboto", sans-serif;
+    }
+    ```
+
+3.  **Import the Theme:** Open `apps/client/styles/globals.css` and add an `@import` rule for your new theme file:
+
+    ```css
+    @import "./themes/my-theme.css";
+    ```
+
+4.  **Add to ThemeSwitcher:** Open `apps/client/components/ThemeSwitcher.tsx` and add your new theme's class name to the `themes` array:
+
+    ```javascript
+    const themes = ['light', 'dark', 'desert', 'ocean', 'forest', 'dracula', 'matrix', 'corporate', 'my-theme'];
+    ```
+
+Your new theme will now be available in the theme selection dropdown.
+
 ## Tech Stack
 
 - **Frontend**: Next.js (React) with TypeScript

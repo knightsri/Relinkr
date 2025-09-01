@@ -1,0 +1,7 @@
+.matrix {
+  --background: #000000;
+  --foreground: #00ff00;
+  --primary: #00ff00;
+  --primary-foreground: #000000;
+  --font-sans: "Lucida Console", monospace;
+}
