@@ -15,18 +15,8 @@ type User = {
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const session = await getServerSession(context.req, context.res, authOptions);
 
-  const bypass = process.env.DISABLE_AUTH === '1' || (
-    process.env.NODE_ENV !== 'production' && (
-      context.query.preview === '1' ||
-      (Array.isArray(context.query.preview) && context.query.preview.includes('1')) ||
-      context.query.bypass === '1' ||
-      (Array.isArray(context.query.bypass) && context.query.bypass.includes('1')) ||
-      process.env.NEXT_PUBLIC_ALLOW_DESIGN_PREVIEW === '1'
-    )
-  );
-
   if (!session) {
-    if (bypass) {
+    if (process.env.DISABLE_AUTH === '1') {
       return { props: { user: { name: 'Anonymous', email: 'anon@example.com' } } } as any;
     }
     return { redirect: { destination: "/signin", permanent: false } };

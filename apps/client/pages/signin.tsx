@@ -1,9 +1,19 @@
 import React from "react";
 import Head from "next/head";
+import { GetServerSideProps } from "next";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "./api/auth/[...nextauth]";
 import { signIn } from "next-auth/react";
 import ThemeSwitcher from "../components/ThemeSwitcher";
 import { brandingConfig } from "../config/branding";
 
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const session = await getServerSession(context.req, context.res, authOptions);
+  if (session) {
+    return { redirect: { destination: "/", permanent: false } };
+  }
+  return { props: {} };
+};
 
 export default function SignInPage({ csrfToken }: { csrfToken?: string }) {
   return (
