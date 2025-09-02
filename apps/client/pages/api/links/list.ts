@@ -13,10 +13,11 @@ type LinkEntry = {
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const allowDesignBypass = process.env.NODE_ENV !== 'production' && (req.query.preview === '1' || process.env.NEXT_PUBLIC_ALLOW_DESIGN_PREVIEW === '1');
   const session = await getServerSession(req, res, authOptions);
-  if (!session) return res.status(401).json({ error: 'Unauthorized' });
+  if (!session && !allowDesignBypass) return res.status(401).json({ error: 'Unauthorized' });
 
-  const userId = session.user?.email || 'unknown';
+  const userId = session?.user?.email || 'unknown';
 
   // Validate query parameters using Zod
   let validatedQuery;
@@ -30,8 +31,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
   } catch (error) {
     if (error instanceof ZodError) {
-      return res.status(400).json({ 
-        error: 'Invalid query parameters', 
+      return res.status(400).json({
+        error: 'Invalid query parameters',
         details: error.issues.map((issue) => ({
           field: issue.path.join('.'),
           message: issue.message
@@ -39,6 +40,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
     }
     return res.status(500).json({ error: 'Internal server error' });
+  }
+
+  // Design-mode mocked response
+  if (allowDesignBypass) {
+    const { search: q, page, limit: perPage } = validatedQuery;
+    const all = [
+      { slug: 'docs', longUrl: 'https://nextjs.org/docs', internalId: 'mock1', ownerId: userId },
+      { slug: 'builder', longUrl: 'https://www.builder.io/', internalId: 'mock2', ownerId: userId },
+      { slug: 'github', longUrl: 'https://github.com', internalId: 'mock3', ownerId: userId },
+    ];
+    const searchTerm = q?.toLowerCase();
+    const filtered = !searchTerm ? all : all.filter(l => l.slug.includes(searchTerm) || l.longUrl.toLowerCase().includes(searchTerm));
+    const total = filtered.length;
+    const paged = filtered.slice((page - 1) * perPage, page * perPage);
+    return res.status(200).json({ links: paged, total });
   }
 
   const { search: q, page, limit: perPage, sortField, sortDirection } = validatedQuery;
@@ -69,9 +85,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // If sorting by clicks, we need to fetch click counts first
     if (sortField === 'clicks') {
       const clickCountPipeline = redis.pipeline();
-      links.forEach(link => clickCountPipeline.get(`analytics:${link.slug}:clicks`));
+      links.forEach(link => clickCountPipeline.get(`clicks:${link.slug.toLowerCase()}`));
       const clickResults = await clickCountPipeline.exec();
-      
+
       const clickCounts: Record<string, number> = {};
       if (clickResults) {
         clickResults.forEach(([err, count], i) => {

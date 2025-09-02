@@ -1,5 +1,7 @@
 import { AppProps } from 'next/app';
 import '../styles/globals.css'; // Import global styles
+import '../styles/dashboard.css';
+import '../styles/toast.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -10,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </div>
       </main>
       <footer className="bg-gray-100 border-t border-gray-200 py-8 mt-auto">
-        <div className="max-w-[852px] mx-auto px-4 text-center">
+        <div className="footer-links max-w-[852px] mx-auto px-4 text-center">
           <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
             Project Links
           </h3>

@@ -1,0 +1,8 @@
+/* Toast styles driven by CSS vars; override per theme via variables if needed */
+.toast-container { position: fixed; top: 20px; right: 20px; z-index: 1000; max-width: 400px; }
+.toast { padding: 12px 16px; margin-bottom: 8px; border-radius: 6px; color: var(--toast-foreground, #fff); font-weight: 500; font-size: 14px; box-shadow: 0 4px 12px rgba(0,0,0,.15); transition: all .3s ease-in-out; transform: translateX(100%); opacity: 0; cursor: pointer; }
+.toast.visible { transform: translateX(0); opacity: 1; }
+.toast-success { background-color: var(--toast-success-bg, #10b981); }
+.toast-error { background-color: var(--toast-error-bg, #ef4444); }
+.toast-info { background-color: var(--toast-info-bg, #3b82f6); }
+.toast-warning { background-color: var(--toast-warning-bg, #f59e0b); }

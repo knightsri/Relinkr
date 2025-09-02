@@ -4,4 +4,9 @@
   --primary: #007bff;
   --primary-foreground: #ffffff;
   --font-sans: "Helvetica Neue", sans-serif;
+  --surface: #ffffff;
+  --surface-border: #e9ecef;
+  --table-row-bg: #ffffff;
+  --table-row-alt-bg: #f5f7fa;
+  --table-row-hover-bg: #eef2f6;
 }

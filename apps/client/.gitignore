@@ -52,3 +52,6 @@ apps/*/redis_data/
 .info
 ImplementationPlan.md
 TaskList.md
+
+*storybook.log
+storybook-static

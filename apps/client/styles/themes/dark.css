@@ -1,6 +1,11 @@
 .dark {
-  --background: #1c1c1e;
-  --foreground: #f2f2f7;
+  --background: #121214;
+  --foreground: #eaeaea;
   --primary: #0a84ff;
   --primary-foreground: #ffffff;
+  --surface: #1f1f22;
+  --surface-border: #3a3a3f;
+  --table-row-bg: #1f1f22;
+  --table-row-alt-bg: #242428;
+  --table-row-hover-bg: #2a2a2e;
 }

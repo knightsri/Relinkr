@@ -4,4 +4,9 @@
   --primary: #588157;
   --primary-foreground: #ffffff;
   --font-sans: "Georgia", serif;
+  --surface: #e9f7ee;
+  --surface-border: #c2e9d0;
+  --table-row-bg: #edf7f1;
+  --table-row-alt-bg: #e4f3ec;
+  --table-row-hover-bg: #d9efe6;
 }

@@ -18,46 +18,20 @@ const ToastComponent: React.FC<ToastProps> = ({ toast, onRemove }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Trigger animation
     setIsVisible(true);
-
-    // Auto-remove after duration
     const timer = setTimeout(() => {
       setIsVisible(false);
-      setTimeout(() => onRemove(toast.id), 300); // Wait for fade out animation
+      setTimeout(() => onRemove(toast.id), 300);
     }, toast.duration || 4000);
 
     return () => clearTimeout(timer);
   }, [toast.id, toast.duration, onRemove]);
 
-  const getToastStyles = (type: ToastType) => {
-    const baseStyles = {
-      padding: '12px 16px',
-      marginBottom: '8px',
-      borderRadius: '6px',
-      color: 'white',
-      fontWeight: '500',
-      fontSize: '14px',
-      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
-      transition: 'all 0.3s ease-in-out',
-      transform: isVisible ? 'translateX(0)' : 'translateX(100%)',
-      opacity: isVisible ? 1 : 0,
-      cursor: 'pointer',
-    };
-
-    const typeStyles = {
-      success: { backgroundColor: '#10b981' },
-      error: { backgroundColor: '#ef4444' },
-      info: { backgroundColor: '#3b82f6' },
-      warning: { backgroundColor: '#f59e0b' },
-    };
-
-    return { ...baseStyles, ...typeStyles[type] };
-  };
+  const typeClass = `toast-${toast.type}`;
+  const visibleClass = isVisible ? 'visible' : '';
 
   return (
-    <div
-      style={getToastStyles(toast.type)}
+    <div className={`toast ${typeClass} ${visibleClass}`}
       onClick={() => {
         setIsVisible(false);
         setTimeout(() => onRemove(toast.id), 300);
@@ -75,15 +49,7 @@ interface ToastContainerProps {
 
 export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
   return (
-    <div
-      style={{
-        position: 'fixed',
-        top: '20px',
-        right: '20px',
-        zIndex: 1000,
-        maxWidth: '400px',
-      }}
-    >
+    <div className="toast-container">
       {toasts.map((toast) => (
         <ToastComponent key={toast.id} toast={toast} onRemove={onRemove} />
       ))}

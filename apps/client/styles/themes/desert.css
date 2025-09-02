@@ -3,4 +3,9 @@
   --foreground: #264653;
   --primary: #2a9d8f;
   --primary-foreground: #ffffff;
+  --surface: #f7b37e;
+  --surface-border: #e59e63;
+  --table-row-bg: #f9cc9b;
+  --table-row-alt-bg: #fbd8b3;
+  --table-row-hover-bg: #f6b57c;
 }
