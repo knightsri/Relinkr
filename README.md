@@ -17,7 +17,23 @@ Relinkr is a modern, self-hosted URL shortener that provides enterprise-grade fe
 - **🔐 OAuth Authentication** - Secure authentication via GitHub and Google using NextAuth.js
 - **⚡ Redis Performance** - Lightning-fast URL lookups powered by Redis in-memory storage
 
-## Quick Start
+
+## Docker Quick Start
+
+**What it does**: Containerizes the Relinkr Next.js client app and Redis for easy local or production deployment.
+
+**Build**: `docker-compose build`
+
+**Run**: `docker-compose up --build -d`
+
+**Access**: Open [http://localhost:3000](http://localhost:3000) in your browser
+
+**Notes**: 
+- Ports: `3000:3000` (web interface), `6379:6379` (Redis)
+- Env vars: Set in `apps/client/.env.local` (copied to `.env.docker` for containers)
+- No file-based input/output volumes required
+- Redis data is persisted in the `redis-data` Docker volume
+
 
 ### Using Docker Compose (Recommended) ⭐
 
