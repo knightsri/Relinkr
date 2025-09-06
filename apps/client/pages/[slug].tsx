@@ -8,7 +8,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   if (!slug || typeof slug !== "string") return { notFound: true };
 
-  const entry = await redis.get(`url:${slug}`);
+  // const entry = await redis.get(`url:${slug}`);
+  const entry = await redis.get(`url:${slug.toLowerCase()}`);
   if (!entry) return { notFound: true };
 
   const data = JSON.parse(entry);
